@@ -1,24 +1,28 @@
 plugins {
-    id("io.sentry.android.gradle") version "3.0.1"
+    id("io.sentry.android.gradle") version "4.11.0"
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
 
+//sentry {
+//    includeProguardMapping = true
+//    autoUploadProguardMapping = true
+//}
 sentry {
-    includeProguardMapping = true
-    autoUploadProguardMapping = true
+    includeProguardMapping = false
+    autoUploadProguardMapping = false
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.barcodescanner"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 34
         versionCode 12
         versionName "1.10"
         multiDexEnabled true
