@@ -10,7 +10,6 @@ import android.widget.FrameLayout
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import com.example.barcodescanner.R
-import kotlinx.android.synthetic.main.layout_icon_button.view.*
 
 
 class IconButton : FrameLayout {

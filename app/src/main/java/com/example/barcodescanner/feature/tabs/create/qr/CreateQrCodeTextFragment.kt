@@ -12,7 +12,6 @@ import com.example.barcodescanner.extension.textString
 import com.example.barcodescanner.feature.tabs.create.BaseCreateBarcodeFragment
 import com.example.barcodescanner.model.schema.Schema
 import com.google.zxing.BarcodeFormat
-import kotlinx.android.synthetic.main.fragment_create_qr_code_text.*
 
 class CreateQrCodeTextFragment : BaseCreateBarcodeFragment() {
 

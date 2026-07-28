@@ -12,7 +12,6 @@ import com.example.barcodescanner.feature.tabs.history.BarcodeHistoryFragment
 import com.example.barcodescanner.feature.tabs.scan.ScanBarcodeFromCameraFragment
 import com.example.barcodescanner.feature.tabs.settings.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_bottom_tabs.*
 
 class BottomTabsActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 

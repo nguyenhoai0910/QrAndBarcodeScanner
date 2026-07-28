@@ -7,7 +7,6 @@ import com.example.barcodescanner.R
 import com.example.barcodescanner.di.settings
 import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.feature.BaseActivity
-import kotlinx.android.synthetic.main.activity_choose_camera.*
 
 class ChooseCameraActivity : BaseActivity() {
 

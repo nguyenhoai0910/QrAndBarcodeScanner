@@ -11,7 +11,6 @@ import com.example.barcodescanner.extension.unsafeLazy
 import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.feature.common.view.SettingsRadioButton
 import com.example.barcodescanner.model.SearchEngine
-import kotlinx.android.synthetic.main.activity_choose_search_engine.*
 
 class ChooseSearchEngineActivity : BaseActivity() {
 

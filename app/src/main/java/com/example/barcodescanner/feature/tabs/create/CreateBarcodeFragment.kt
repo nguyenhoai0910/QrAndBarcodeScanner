@@ -13,7 +13,6 @@ import com.example.barcodescanner.feature.tabs.create.barcode.CreateBarcodeAllAc
 import com.example.barcodescanner.feature.tabs.create.qr.CreateQrCodeAllActivity
 import com.example.barcodescanner.model.schema.BarcodeSchema
 import com.google.zxing.BarcodeFormat
-import kotlinx.android.synthetic.main.fragment_create_barcode.*
 
 class CreateBarcodeFragment : Fragment() {
 

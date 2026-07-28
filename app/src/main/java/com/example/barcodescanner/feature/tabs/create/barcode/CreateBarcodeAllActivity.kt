@@ -8,7 +8,6 @@ import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.feature.tabs.create.CreateBarcodeActivity
 import com.google.zxing.BarcodeFormat
-import kotlinx.android.synthetic.main.activity_create_barcode_all.*
 
 class CreateBarcodeAllActivity : BaseActivity() {
 

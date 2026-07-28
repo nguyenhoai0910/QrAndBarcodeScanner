@@ -11,7 +11,6 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.example.barcodescanner.R
-import kotlinx.android.synthetic.main.layout_icon_button_with_delimiter.view.*
 
 
 class IconButtonWithDelimiter : FrameLayout {

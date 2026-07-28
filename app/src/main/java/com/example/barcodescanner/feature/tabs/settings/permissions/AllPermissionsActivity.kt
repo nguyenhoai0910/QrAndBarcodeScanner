@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.example.barcodescanner.R
 import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.feature.BaseActivity
-import kotlinx.android.synthetic.main.activity_all_permissions.*
 
 class AllPermissionsActivity : BaseActivity() {
 

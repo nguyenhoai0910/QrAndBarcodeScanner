@@ -15,7 +15,6 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
-import kotlinx.android.synthetic.main.activity_barcode_otp.*
 import java.util.concurrent.TimeUnit
 
 class OtpActivity : BaseActivity() {

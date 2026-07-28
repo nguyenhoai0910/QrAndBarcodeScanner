@@ -18,7 +18,6 @@ import io.reactivex.BackpressureStrategy
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
-import kotlinx.android.synthetic.main.fragment_barcode_history_list.*
 
 class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
 

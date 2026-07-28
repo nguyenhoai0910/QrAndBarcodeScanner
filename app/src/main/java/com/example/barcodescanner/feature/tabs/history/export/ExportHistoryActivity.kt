@@ -21,7 +21,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_export_history.*
 
 class ExportHistoryActivity : BaseActivity() {
     private val disposable = CompositeDisposable()

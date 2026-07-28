@@ -17,7 +17,6 @@ import com.example.barcodescanner.feature.tabs.create.BaseCreateBarcodeFragment
 import com.example.barcodescanner.model.schema.OtpAuth
 import com.example.barcodescanner.model.schema.Schema
 import dev.turingcomplete.kotlinonetimepassword.RandomSecretGenerator
-import kotlinx.android.synthetic.main.fragment_create_qr_code_otp.*
 import java.util.*
 
 class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {

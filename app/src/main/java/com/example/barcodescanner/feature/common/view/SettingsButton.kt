@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import com.example.barcodescanner.R
-import kotlinx.android.synthetic.main.layout_settings_button.view.*
 
 class SettingsButton : FrameLayout {
     private val view: View

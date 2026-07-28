@@ -15,7 +15,6 @@ import com.example.barcodescanner.extension.toColorId
 import com.example.barcodescanner.extension.toImageId
 import com.example.barcodescanner.extension.toStringId
 import com.example.barcodescanner.model.Barcode
-import kotlinx.android.synthetic.main.item_barcode_history.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 

@@ -1,0 +1,942 @@
+Configuration on demand is an incubating feature.
+
+> Configure project :app
+WARNING: Using 'io.sentry.android.gradle' is only supported for the app module.
+Please make sure that you apply the Sentry gradle plugin alongside 'com.android.application' on the _module_ level, and not on the root project level.
+https://docs.sentry.io/platforms/android/configuration/gradle/
+
+> Task :clean UP-TO-DATE
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preGooglePlayDebugBuild UP-TO-DATE
+> Task :app:mergeGooglePlayDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+> Task :app:generateGooglePlayDebugResValues
+
+> Task :app:dataBindingMergeDependencyArtifactsGooglePlayDebug
+[sentry] sentry-android-sqlite won't be installed because the current sentry version is lower than the minimum supported sentry version (6.21.0)
+
+> Task :app:generateGooglePlayDebugResources
+
+> Task :app:mergeGooglePlayDebugResources
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values/strings.xml:323:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-zh/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-it/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-iw/strings.xml:322:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-pt-rBR/strings.xml:320:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-tr/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-ru/strings.xml:301:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-es/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-el/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-eu/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-ca/strings.xml:322:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-pl/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-de/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-ja/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-zh-rTW/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/res/values-fr/strings.xml:321:4: Multiple substitutions specified in non-positional format of string resource string/activity_barcode_otp_timer. Did you mean to add the formatted="false" attribute?
+
+> Task :app:packageGooglePlayDebugResources
+> Task :app:generateGooglePlayDebugBuildConfig
+> Task :app:mapGooglePlayDebugSourceSetPaths
+> Task :app:checkGooglePlayDebugAarMetadata
+> Task :app:createGooglePlayDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksGooglePlayDebug
+> Task :app:parseGooglePlayDebugLocalResources
+
+> Task :app:processGooglePlayDebugMainManifest
+package="com.example.barcodescanner" found in source AndroidManifest.xml: /home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.example.barcodescanner" from the source AndroidManifest.xml: /home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/AndroidManifest.xml.
+
+> Task :app:dataBindingGenBaseClassesGooglePlayDebug
+> Task :app:googlePlayDebugSentryGenerateIntegrationListTask
+> Task :app:processGooglePlayDebugManifest
+> Task :app:javaPreCompileGooglePlayDebug
+> Task :app:collectExternalGooglePlayDebugDependenciesForSentry
+> Task :app:mergeGooglePlayDebugShaders
+> Task :app:compileGooglePlayDebugShaders NO-SOURCE
+> Task :app:generateGooglePlayDebugAssets UP-TO-DATE
+> Task :app:mergeGooglePlayDebugAssets
+> Task :app:injectSentryDebugMetaPropertiesIntoAssetsGooglePlayDebug
+> Task :app:compressGooglePlayDebugAssets
+> Task :app:checkGooglePlayDebugDuplicateClasses
+> Task :app:desugarGooglePlayDebugFileDependencies
+> Task :app:mergeGooglePlayDebugStartupProfile
+> Task :app:processGooglePlayDebugManifestForPackage
+> Task :app:mergeExtDexGooglePlayDebug
+> Task :app:mergeGooglePlayDebugJniLibFolders
+> Task :app:mergeLibDexGooglePlayDebug
+> Task :app:mergeGooglePlayDebugNativeLibs
+> Task :app:validateSigningGooglePlayDebug
+> Task :app:writeGooglePlayDebugAppMetadata
+> Task :app:writeGooglePlayDebugSigningConfigVersions
+
+> Task :app:stripGooglePlayDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libsentry-android.so, libsentry.so.
+
+> Task :app:processGooglePlayDebugResources
+> Task :app:kaptGenerateStubsGooglePlayDebugKotlin
+
+> Task :app:kaptGooglePlayDebugKotlin
+/home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/build/tmp/kapt3/stubs/googlePlayDebug/com/example/barcodescanner/usecase/BarcodeDatabaseFactory.java:5: warning: Schema export directory is not provided to the annotation processor so we cannot export the schema. You can either provide `room.schemaLocation` annotation processor argument OR set exportSchema to false.
+public abstract class BarcodeDatabaseFactory extends androidx.room.RoomDatabase {
+                ^
+
+> Task :app:compileGooglePlayDebugKotlin FAILED
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:116:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:157:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:163:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:163:46 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:167:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:167:74 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:168:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:168:74 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:172:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:172:74 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:173:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:173:74 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:185:9 Unresolved reference: button_edit_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:187:9 Unresolved reference: button_search_on_web
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:188:9 Unresolved reference: button_add_to_calendar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:189:9 Unresolved reference: button_add_to_contacts
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:190:9 Unresolved reference: button_show_location
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:191:9 Unresolved reference: button_connect_to_wifi
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:192:9 Unresolved reference: button_open_wifi_settings
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:193:9 Unresolved reference: button_copy_network_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:194:9 Unresolved reference: button_copy_network_password
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:195:9 Unresolved reference: button_open_app
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:196:9 Unresolved reference: button_open_in_app_market
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:197:9 Unresolved reference: button_open_in_youtube
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:198:9 Unresolved reference: button_show_otp
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:199:9 Unresolved reference: button_open_otp
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:200:9 Unresolved reference: button_open_bitcoin_uri
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:201:9 Unresolved reference: button_open_link
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:202:9 Unresolved reference: button_save_bookmark
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:204:9 Unresolved reference: button_call_phone_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:205:9 Unresolved reference: button_call_phone_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:206:9 Unresolved reference: button_call_phone_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:208:9 Unresolved reference: button_send_sms_or_mms_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:209:9 Unresolved reference: button_send_sms_or_mms_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:210:9 Unresolved reference: button_send_sms_or_mms_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:212:9 Unresolved reference: button_send_email_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:213:9 Unresolved reference: button_send_email_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:214:9 Unresolved reference: button_send_email_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:216:9 Unresolved reference: button_share_as_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:217:9 Unresolved reference: button_copy
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:218:9 Unresolved reference: button_search
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:219:9 Unresolved reference: button_save_as_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:220:9 Unresolved reference: button_share_as_image
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:221:9 Unresolved reference: button_save_as_image
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:222:9 Unresolved reference: button_print
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:266:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:266:50 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:274:21 Unresolved reference: button_edit_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:274:38 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:275:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:275:64 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:278:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:278:62 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:550:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:551:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:552:13 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:552:53 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:553:13 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:553:51 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:554:13 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:554:53 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:555:13 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:555:39 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:556:13 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:556:41 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:570:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:570:61 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:582:13 Unresolved reference: layout_barcode_image_background
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:582:45 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:583:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:583:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:584:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:585:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:586:13 Unresolved reference: layout_barcode_image_background
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:589:17 Unresolved reference: layout_barcode_image_background
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:593:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:593:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:598:9 Unresolved reference: text_view_date
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:598:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:603:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:611:9 Unresolved reference: text_view_barcode_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:611:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:612:9 Unresolved reference: text_view_barcode_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:612:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:616:9 Unresolved reference: text_view_barcode_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:616:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:651:9 Unresolved reference: text_view_country
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:652:13 Unresolved reference: text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:653:13 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public var View.isVisible: Boolean defined in androidx.core.view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:658:9 Unresolved reference: button_search
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:658:23 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:659:9 Unresolved reference: button_edit_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:659:26 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:665:9 Unresolved reference: button_search_on_web
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:665:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:666:9 Unresolved reference: button_search
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:666:23 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:668:9 Unresolved reference: button_add_to_calendar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:668:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:669:9 Unresolved reference: button_add_to_contacts
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:669:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:671:9 Unresolved reference: button_call_phone_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:671:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:672:9 Unresolved reference: button_call_phone_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:672:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:673:9 Unresolved reference: button_call_phone_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:673:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:675:9 Unresolved reference: button_send_sms_or_mms_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:675:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:676:9 Unresolved reference: button_send_sms_or_mms_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:676:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:677:9 Unresolved reference: button_send_sms_or_mms_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:677:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:679:9 Unresolved reference: button_send_email_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:679:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:680:9 Unresolved reference: button_send_email_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:680:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:681:9 Unresolved reference: button_send_email_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:681:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:683:9 Unresolved reference: button_show_location
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:683:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:684:9 Unresolved reference: button_connect_to_wifi
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:684:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:685:9 Unresolved reference: button_open_wifi_settings
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:685:35 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:686:9 Unresolved reference: button_copy_network_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:686:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:687:9 Unresolved reference: button_copy_network_password
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:687:38 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:688:9 Unresolved reference: button_open_app
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:688:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:689:9 Unresolved reference: button_open_in_app_market
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:689:35 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:690:9 Unresolved reference: button_open_in_youtube
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:690:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:691:9 Unresolved reference: button_show_otp
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:691:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:692:9 Unresolved reference: button_open_otp
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:692:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:693:9 Unresolved reference: button_open_bitcoin_uri
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:693:33 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:694:9 Unresolved reference: button_open_link
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:694:26 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:695:9 Unresolved reference: button_save_bookmark
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:695:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:699:9 Unresolved reference: button_call_phone_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:699:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:700:9 Unresolved reference: button_call_phone_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:700:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:701:9 Unresolved reference: button_call_phone_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:701:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:703:9 Unresolved reference: button_send_sms_or_mms_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:703:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:704:9 Unresolved reference: button_send_sms_or_mms_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:704:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:705:9 Unresolved reference: button_send_sms_or_mms_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:705:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:707:9 Unresolved reference: button_send_email_1
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:707:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:708:9 Unresolved reference: button_send_email_2
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:708:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:709:9 Unresolved reference: button_send_email_3
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:709:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:713:9 Unresolved reference: button_connect_to_wifi
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:713:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:732:9 Unresolved reference: progress_bar_loading
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:732:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:733:9 Unresolved reference: scroll_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeActivity.kt:733:21 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:49:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:57:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:63:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:63:46 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:67:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:68:25 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:68:65 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:69:25 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:69:65 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:74:21 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:75:25 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:75:65 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:76:25 Unresolved reference: findItem
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:76:65 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:85:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:98:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:99:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:100:13 Unresolved reference: layout_barcode_image_background
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:103:17 Unresolved reference: layout_barcode_image_background
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:107:13 Unresolved reference: image_view_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:107:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:112:9 Unresolved reference: text_view_date
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:112:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:117:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:121:9 Unresolved reference: text_view_barcode_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/BarcodeImageActivity.kt:121:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:60:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:68:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:74:9 Unresolved reference: button_refresh
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:89:9 Unresolved reference: text_view_password
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:89:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:93:9 Unresolved reference: button_refresh
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:93:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:94:9 Unresolved reference: text_view_counter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:94:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:95:9 Unresolved reference: text_view_counter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:95:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:99:9 Unresolved reference: text_view_timer
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:99:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:124:9 Unresolved reference: text_view_timer
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/otp/OtpActivity.kt:124:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:67:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:71:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:77:9 Unresolved reference: spinner_save_as
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:77:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:85:9 Unresolved reference: button_save
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:95:30 Unresolved reference: spinner_save_as
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:125:9 Unresolved reference: progress_bar_loading
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:125:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:126:9 Unresolved reference: scroll_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsImageActivity.kt:126:21 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:66:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:70:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:76:9 Unresolved reference: spinner_save_as
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:76:25 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:84:9 Unresolved reference: button_save
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:94:30 Unresolved reference: spinner_save_as
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:116:9 Unresolved reference: progress_bar_loading
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:116:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:117:9 Unresolved reference: scroll_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/barcode/save/SaveBarcodeAsTextActivity.kt:117:21 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/dialog/EditBarcodeNameDialogFragment.kt:44:36 Unresolved reference: edit_text_barcode_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/dialog/EditBarcodeNameDialogFragment.kt:51:35 Unresolved reference: edit_text_barcode_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/DateTimePickerButton.kt:45:14 Unresolved reference: text_view_hint
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/DateTimePickerButton.kt:45:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/DateTimePickerButton.kt:51:25 Unresolved reference: text_view_hint
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/DateTimePickerButton.kt:61:14 Unresolved reference: text_view_date_time
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/DateTimePickerButton.kt:61:34 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:19:22 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:20:27 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:20:37 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:40:14 Unresolved reference: image_view_schema
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:48:15 Unresolved reference: layout_image
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:52:14 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:52:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:57:14 Unresolved reference: image_view_schema
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:57:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:58:14 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButton.kt:58:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:39:14 Unresolved reference: image_view_schema
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:44:15 Unresolved reference: layout_image
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:48:14 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:48:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:52:14 Unresolved reference: image_view_arrow
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:52:31 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:56:14 Unresolved reference: delimiter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:56:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:61:14 Unresolved reference: image_view_schema
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:61:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:62:14 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/IconButtonWithDelimiter.kt:62:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:31:22 Unresolved reference: text_view_hint
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:33:18 Unresolved reference: text_view_hint
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:34:17 Unresolved reference: text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:35:29 Unresolved reference: text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:40:22 Unresolved reference: switch_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:41:27 Unresolved reference: switch_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:41:41 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:45:9 Unresolved reference: text_view_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:45:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:49:14 Unresolved reference: switch_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:49:57 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:49:60 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:55:14 Unresolved reference: text_view_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:55:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:63:14 Unresolved reference: switch_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:63:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:64:18 Unresolved reference: switch_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsButton.kt:66:22 Unresolved reference: switch_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:29:13 Unresolved reference: radio_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:34:22 Unresolved reference: radio_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:35:27 Unresolved reference: radio_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:35:40 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:38:14 Unresolved reference: radio_button
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:38:56 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:38:59 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:44:14 Unresolved reference: text_view_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:44:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:48:14 Unresolved reference: delimiter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/common/view/SettingsRadioButton.kt:48:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:36:28 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:44:13 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:47:13 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:47:36 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:52:9 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:56:9 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:57:13 Unresolved reference: setOnNavigationItemSelectedListener
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:63:38 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:63:61 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:64:31 Unresolved reference: bottom_navigation_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/BottomTabsActivity.kt:64:54 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:82:13 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:83:17 Unresolved reference: icon
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:84:17 Unresolved reference: isEnabled
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:137:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:195:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:201:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:201:46 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:213:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeActivity.kt:223:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:30:9 Unresolved reference: app_bar_layout
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:35:9 Unresolved reference: button_clipboard
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:36:9 Unresolved reference: button_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:37:9 Unresolved reference: button_url
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:38:9 Unresolved reference: button_wifi
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:39:9 Unresolved reference: button_location
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:40:9 Unresolved reference: button_contact_vcard
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:41:9 Unresolved reference: button_show_all_qr_code
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/CreateBarcodeFragment.kt:44:9 Unresolved reference: button_create_barcode
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateAztecFragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateAztecFragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateAztecFragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateAztecFragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:31:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:35:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:41:9 Unresolved reference: button_data_matrix
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:42:9 Unresolved reference: button_aztec
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:43:9 Unresolved reference: button_pdf_417
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:44:9 Unresolved reference: button_codabar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:45:9 Unresolved reference: button_code_39
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:46:9 Unresolved reference: button_code_93
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:47:9 Unresolved reference: button_code_128
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:48:9 Unresolved reference: button_ean_8
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:49:9 Unresolved reference: button_ean_13
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:50:9 Unresolved reference: button_itf_14
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:51:9 Unresolved reference: button_upc_a
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateBarcodeAllActivity.kt:52:9 Unresolved reference: button_upc_e
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCodabarFragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCodabarFragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCodabarFragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCodabarFragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode128Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode128Fragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode128Fragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode128Fragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode39Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode39Fragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode39Fragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode39Fragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode93Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode93Fragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode93Fragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateCode93Fragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateDataMatrixFragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateDataMatrixFragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateDataMatrixFragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateDataMatrixFragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan13Fragment.kt:22:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan13Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan13Fragment.kt:24:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan13Fragment.kt:29:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan8Fragment.kt:22:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan8Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan8Fragment.kt:24:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateEan8Fragment.kt:29:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateItf14Fragment.kt:22:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateItf14Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateItf14Fragment.kt:24:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateItf14Fragment.kt:29:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreatePdf417Fragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreatePdf417Fragment.kt:24:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreatePdf417Fragment.kt:25:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreatePdf417Fragment.kt:30:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcAFragment.kt:22:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcAFragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcAFragment.kt:24:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcAFragment.kt:29:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcEFragment.kt:22:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcEFragment.kt:23:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcEFragment.kt:24:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/barcode/CreateUpcEFragment.kt:29:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/AppAdapter.kt:52:22 Unresolved reference: text_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/AppAdapter.kt:52:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/AppAdapter.kt:56:22 Unresolved reference: image_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/AppAdapter.kt:60:22 Unresolved reference: delimiter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/AppAdapter.kt:60:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:32:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:36:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:42:9 Unresolved reference: button_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:43:9 Unresolved reference: button_url
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:44:9 Unresolved reference: button_wifi
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:45:9 Unresolved reference: button_location
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:46:9 Unresolved reference: button_otp
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:47:9 Unresolved reference: button_contact_vcard
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:48:9 Unresolved reference: button_contact_mecard
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:49:9 Unresolved reference: button_event
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:50:9 Unresolved reference: button_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:51:9 Unresolved reference: button_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:52:9 Unresolved reference: button_sms
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:53:9 Unresolved reference: button_mms
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:54:9 Unresolved reference: button_cryptocurrency
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:55:9 Unresolved reference: button_bookmark
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAllActivity.kt:56:9 Unresolved reference: button_app
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:46:9 Unresolved reference: recycler_view_apps
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:47:13 Unresolved reference: layoutManager
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:48:13 Unresolved reference: adapter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:82:9 Unresolved reference: progress_bar_loading
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:82:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:83:9 Unresolved reference: recycler_view_apps
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeAppFragment.kt:83:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:29:21 Unresolved reference: edit_text_title
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:30:19 Unresolved reference: edit_text_url
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:35:9 Unresolved reference: edit_text_title
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:39:9 Unresolved reference: edit_text_title
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:40:9 Unresolved reference: edit_text_url
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:44:55 Unresolved reference: edit_text_title
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeBookmarkFragment.kt:44:87 Unresolved reference: edit_text_url
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:30:36 Unresolved reference: spinner_cryptocurrency
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:40:23 Unresolved reference: edit_text_address
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:41:21 Unresolved reference: edit_text_label
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:42:22 Unresolved reference: edit_text_amount
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:43:23 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:48:9 Unresolved reference: spinner_cryptocurrency
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:48:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:56:9 Unresolved reference: edit_text_address
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:60:16 Unresolved reference: edit_text_address
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:60:35 Unresolved reference: edit_text_amount
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:60:53 Unresolved reference: edit_text_label
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:60:70 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:60:89 Overload resolution ambiguity: 
+public inline fun <T> Iterable<TypeVariable(T)>.forEach(action: (TypeVariable(T)) -> Unit): Unit defined in kotlin.collections
+public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.forEach(action: (Map.Entry<TypeVariable(K), TypeVariable(V)>) -> Unit): Unit defined in kotlin.collections
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:60:99 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeCryptocurrencyFragment.kt:66:55 Unresolved reference: edit_text_address
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:29:21 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:30:23 Unresolved reference: edit_text_subject
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:31:20 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:36:9 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:40:9 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:41:9 Unresolved reference: edit_text_subject
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:42:9 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:46:55 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:46:87 Unresolved reference: edit_text_subject
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEmailFragment.kt:46:121 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEventFragment.kt:21:9 Unresolved reference: edit_text_title
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEventFragment.kt:27:19 Unresolved reference: edit_text_title
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEventFragment.kt:28:25 Unresolved reference: edit_text_organizer
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEventFragment.kt:29:23 Unresolved reference: edit_text_summary
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEventFragment.kt:30:25 Unresolved reference: button_date_time_start
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeEventFragment.kt:31:23 Unresolved reference: button_date_time_end
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:18:17 Unresolved reference: edit_text_latitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:21:17 Unresolved reference: edit_text_longitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:35:23 Unresolved reference: edit_text_latitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:36:24 Unresolved reference: edit_text_longitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:37:23 Unresolved reference: edit_text_altitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:43:13 Unresolved reference: edit_text_latitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:46:13 Unresolved reference: edit_text_longitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:51:9 Unresolved reference: edit_text_latitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:55:9 Unresolved reference: edit_text_latitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:56:9 Unresolved reference: edit_text_longitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:60:55 Unresolved reference: edit_text_latitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeLocationFragment.kt:60:90 Unresolved reference: edit_text_longitude
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:22:9 Unresolved reference: edit_text_first_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:28:25 Unresolved reference: edit_text_first_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:29:24 Unresolved reference: edit_text_last_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:30:21 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:31:21 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:36:9 Unresolved reference: edit_text_first_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:37:9 Unresolved reference: edit_text_last_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:38:9 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMeCardFragment.kt:39:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:28:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:29:13 Unresolved reference: setText
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:30:13 Unresolved reference: setSelection
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:36:21 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:37:23 Unresolved reference: edit_text_subject
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:38:23 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:43:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:47:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:48:9 Unresolved reference: edit_text_subject
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:49:9 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:53:55 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:53:87 Unresolved reference: edit_text_subject
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeMmsFragment.kt:53:121 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:40:20 Unresolved reference: spinner_opt_types
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:41:25 Unresolved reference: spinner_algorithms
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:42:25 Unresolved reference: edit_text_issuer
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:43:20 Unresolved reference: edit_text_issuer
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:43:51 Unresolved reference: edit_text_account
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:45:17 Unresolved reference: edit_text_account
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:47:22 Unresolved reference: edit_text_issuer
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:48:22 Unresolved reference: edit_text_digits
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:49:22 Unresolved reference: edit_text_period
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:50:23 Unresolved reference: edit_text_counter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:51:22 Unresolved reference: edit_text_secret
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:56:9 Unresolved reference: spinner_opt_types
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:56:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:62:9 Unresolved reference: spinner_opt_types
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:62:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:64:17 Unresolved reference: text_input_layout_counter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:64:43 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:74:9 Unresolved reference: spinner_algorithms
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:74:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:82:9 Unresolved reference: edit_text_account
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:83:9 Unresolved reference: edit_text_secret
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:84:9 Unresolved reference: edit_text_period
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:85:9 Unresolved reference: edit_text_counter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:89:9 Unresolved reference: button_generate_random_secret
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:95:22 Unresolved reference: spinner_opt_types
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:96:40 Unresolved reference: edit_text_account
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:96:74 Unresolved reference: edit_text_secret
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:97:37 Unresolved reference: edit_text_counter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:97:71 Unresolved reference: edit_text_period
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:102:9 Unresolved reference: edit_text_secret
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:106:25 Unresolved reference: spinner_algorithms
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeOtpFragment.kt:107:38 Overload resolution ambiguity: 
+public final fun createRandomSecret(hmacAlgorithm: HmacAlgorithm): ByteArray defined in dev.turingcomplete.kotlinonetimepassword.RandomSecretGenerator
+public final fun createRandomSecret(secretBytes: Int): ByteArray defined in dev.turingcomplete.kotlinonetimepassword.RandomSecretGenerator
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:28:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:29:13 Unresolved reference: setText
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:30:13 Unresolved reference: setSelection
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:35:22 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:39:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:43:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodePhoneFragment.kt:44:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:28:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:29:13 Unresolved reference: setText
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:30:13 Unresolved reference: setSelection
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:36:20 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:37:22 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:42:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:46:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:47:9 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:51:55 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeSmsFragment.kt:51:87 Unresolved reference: edit_text_message
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:41:65 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:46:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:47:13 Unresolved reference: setText
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:48:13 Unresolved reference: setSelection
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:49:13 Unresolved reference: requestFocus
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:54:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeTextFragment.kt:55:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:28:20 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:33:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:34:13 Unresolved reference: setText
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:35:13 Unresolved reference: setSelection
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:36:13 Unresolved reference: requestFocus
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:41:9 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeUrlFragment.kt:42:59 Unresolved reference: edit_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:22:9 Unresolved reference: edit_text_first_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:28:24 Unresolved reference: edit_text_first_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:29:23 Unresolved reference: edit_text_last_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:30:27 Unresolved reference: edit_text_organization
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:31:20 Unresolved reference: edit_text_job
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:32:20 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:33:20 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:34:29 Unresolved reference: edit_text_fax
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:35:18 Unresolved reference: edit_text_website
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:40:9 Unresolved reference: edit_text_first_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:41:9 Unresolved reference: edit_text_last_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:42:9 Unresolved reference: edit_text_email
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeVCardFragment.kt:43:9 Unresolved reference: edit_text_phone
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:32:32 Unresolved reference: spinner_encryption
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:40:20 Unresolved reference: edit_text_network_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:41:24 Unresolved reference: edit_text_password
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:42:24 Unresolved reference: check_box_is_hidden
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:47:9 Unresolved reference: spinner_encryption
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:47:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:53:9 Unresolved reference: spinner_encryption
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:53:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:55:17 Unresolved reference: text_input_layout_password
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:55:44 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:65:9 Unresolved reference: edit_text_network_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:69:9 Unresolved reference: edit_text_network_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:70:9 Unresolved reference: edit_text_password
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/create/qr/CreateQrCodeWifiFragment.kt:74:55 Unresolved reference: edit_text_network_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:55:22 Unresolved reference: text_view_date
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:55:37 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:59:22 Unresolved reference: text_view_format
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:63:22 Unresolved reference: text_view_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:63:37 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:69:22 Unresolved reference: image_view_schema
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:75:23 Unresolved reference: layout_image
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:79:22 Unresolved reference: image_view_favorite
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:79:42 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:83:22 Unresolved reference: delimiter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryAdapter.kt:83:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:44:9 Unresolved reference: app_bar_layout
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:48:9 Unresolved reference: view_pager
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:48:20 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:49:9 Unresolved reference: tab_layout
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:49:39 Unresolved reference: view_pager
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:53:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryFragment.kt:53:46 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryListFragment.kt:70:9 Unresolved reference: recycler_view_history
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryListFragment.kt:71:13 Unresolved reference: layoutManager
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/BarcodeHistoryListFragment.kt:72:13 Unresolved reference: adapter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:60:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:64:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:70:9 Unresolved reference: spinner_export_as
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:70:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:78:9 Unresolved reference: edit_text_file_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:79:13 Unresolved reference: button_export
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:79:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:79:39 Unresolved reference: edit_text_file_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:84:9 Unresolved reference: button_export
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:94:24 Unresolved reference: edit_text_file_name
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:95:30 Unresolved reference: spinner_export_as
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:123:9 Unresolved reference: progress_bar_loading
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:123:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:124:9 Unresolved reference: scroll_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/history/export/ExportHistoryActivity.kt:124:21 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:103:9 Unresolved reference: image_view_flash
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:104:9 Unresolved reference: image_view_scan_from_file
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:136:54 Unresolved reference: scanner_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:160:13 Unresolved reference: seek_bar_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:160:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:161:13 Unresolved reference: seek_bar_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:161:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:166:9 Unresolved reference: layout_flash_container
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:169:9 Unresolved reference: image_view_flash
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:169:26 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:173:9 Unresolved reference: layout_scan_from_file_container
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:179:9 Unresolved reference: seek_bar_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:192:9 Unresolved reference: button_decrease_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:198:9 Unresolved reference: button_increase_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:210:13 Unresolved reference: seek_bar_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:210:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:221:13 Unresolved reference: seek_bar_zoom
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:221:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:307:9 Unresolved reference: image_view_flash
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:307:26 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/ScanBarcodeFromCameraFragment.kt:307:40 Unresolved reference: image_view_flash
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:92:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:137:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:143:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:143:46 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:145:42 Unresolved reference: crop_image_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:146:43 Unresolved reference: crop_image_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:154:9 Unresolved reference: crop_image_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:155:23 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:163:9 Unresolved reference: button_scan
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:171:9 Unresolved reference: crop_image_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:197:9 Unresolved reference: crop_image_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:244:9 Unresolved reference: progress_bar_loading
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:244:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:245:9 Unresolved reference: button_scan
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:245:21 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:249:9 Unresolved reference: button_scan
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/scan/file/ScanBarcodeFromFileActivity.kt:249:21 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:59:9 Unresolved reference: app_bar_layout
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:63:9 Unresolved reference: button_inverse_barcode_colors_in_dark_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:63:117 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:64:9 Unresolved reference: button_open_links_automatically
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:64:103 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:65:9 Unresolved reference: button_copy_to_clipboard
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:65:89 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:66:9 Unresolved reference: button_simple_auto_focus
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:66:89 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:67:9 Unresolved reference: button_flashlight
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:67:72 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:68:9 Unresolved reference: button_vibrate
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:68:71 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:69:9 Unresolved reference: button_continuous_scanning
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:69:94 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:70:9 Unresolved reference: button_confirm_scans_manually
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:70:99 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:71:9 Unresolved reference: button_save_scanned_barcodes
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:71:106 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:72:9 Unresolved reference: button_save_created_barcodes
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:72:106 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:73:9 Unresolved reference: button_do_not_save_duplicates
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:73:98 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:74:9 Unresolved reference: button_enable_error_reports
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:74:99 Unresolved reference: it
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:78:9 Unresolved reference: button_choose_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:79:9 Unresolved reference: button_choose_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:80:9 Unresolved reference: button_select_supported_formats
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:81:9 Unresolved reference: button_clear_history
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:82:9 Unresolved reference: button_choose_search_engine
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:83:9 Unresolved reference: button_permissions
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:84:9 Unresolved reference: button_check_updates
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:85:9 Unresolved reference: button_source_code
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:89:9 Unresolved reference: button_clear_history
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:89:30 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:96:21 Unresolved reference: button_clear_history
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:96:42 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:99:21 Unresolved reference: button_clear_history
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:99:42 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:108:13 Unresolved reference: button_inverse_barcode_colors_in_dark_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:108:57 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:109:13 Unresolved reference: button_open_links_automatically
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:109:45 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:110:13 Unresolved reference: button_copy_to_clipboard
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:110:38 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:111:13 Unresolved reference: button_simple_auto_focus
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:111:38 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:112:13 Unresolved reference: button_flashlight
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:112:31 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:113:13 Unresolved reference: button_vibrate
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:113:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:114:13 Unresolved reference: button_continuous_scanning
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:114:40 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:115:13 Unresolved reference: button_confirm_scans_manually
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:115:43 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:116:13 Unresolved reference: button_save_scanned_barcodes
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:116:42 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:117:13 Unresolved reference: button_save_created_barcodes
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:117:42 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:118:13 Unresolved reference: button_do_not_save_duplicates
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:118:43 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:119:13 Unresolved reference: button_enable_error_reports
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:119:41 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:146:9 Unresolved reference: button_app_version
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/SettingsFragment.kt:146:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:36:9 Unresolved reference: button_back_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:36:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:37:9 Unresolved reference: button_front_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:37:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:41:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:45:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:51:9 Unresolved reference: button_back_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:51:56 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:53:17 Unresolved reference: button_front_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:53:37 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:60:9 Unresolved reference: button_front_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:60:57 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:62:17 Unresolved reference: button_back_camera
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/camera/ChooseCameraActivity.kt:62:36 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:40:22 Unresolved reference: text_view_text
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:40:37 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:41:22 Unresolved reference: delimiter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:41:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:42:22 Unresolved reference: check_box
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:42:32 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:44:22 Unresolved reference: check_box
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:44:61 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:44:64 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/FormatsAdapter.kt:49:26 Unresolved reference: check_box
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/SupportedFormatsActivity.kt:41:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/SupportedFormatsActivity.kt:45:9 Unresolved reference: recycler_view_formats
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/SupportedFormatsActivity.kt:46:13 Unresolved reference: layoutManager
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/SupportedFormatsActivity.kt:47:13 Unresolved reference: adapter
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/formats/SupportedFormatsActivity.kt:52:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/permissions/AllPermissionsActivity.kt:22:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/permissions/AllPermissionsActivity.kt:23:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:24:28 Not enough information to infer type variable T
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:24:28 Property delegate must have a 'getValue(ChooseSearchEngineActivity, KProperty<*>)' method. None of the following functions is suitable: 
+public inline operator fun <T> Lazy<???>.getValue(thisRef: Any?, property: KProperty<*>): ??? defined in kotlin
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:16 Unresolved reference: button_none
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:29 Unresolved reference: button_ask_every_time
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:52 Unresolved reference: button_bing
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:65 Unresolved reference: button_duck_duck_go
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:86 Unresolved reference: button_google
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:101 Unresolved reference: button_qwant
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:115 Unresolved reference: button_startpage
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:133 Unresolved reference: button_yahoo
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:25:147 Unresolved reference: button_yandex
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:38:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:42:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:47:34 Unresolved reference: button_none
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:47:46 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:48:44 Unresolved reference: button_ask_every_time
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:48:66 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:49:34 Unresolved reference: button_bing
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:49:46 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:50:42 Unresolved reference: button_duck_duck_go
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:50:62 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:51:36 Unresolved reference: button_google
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:51:50 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:52:35 Unresolved reference: button_qwant
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:52:48 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:53:39 Unresolved reference: button_startpage
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:53:56 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:54:35 Unresolved reference: button_yahoo
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:54:48 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:55:36 Unresolved reference: button_yandex
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:55:50 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:60:9 Unresolved reference: button_none
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:61:9 Unresolved reference: button_ask_every_time
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:62:9 Unresolved reference: button_bing
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:63:9 Unresolved reference: button_duck_duck_go
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:64:9 Unresolved reference: button_google
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:65:9 Unresolved reference: button_qwant
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:66:9 Unresolved reference: button_startpage
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:67:9 Unresolved reference: button_yahoo
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:68:9 Unresolved reference: button_yandex
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:81:17 Overload resolution ambiguity: 
+public inline fun <T> Iterable<TypeVariable(T)>.forEach(action: (TypeVariable(T)) -> Unit): Unit defined in kotlin.collections
+public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.forEach(action: (Map.Entry<TypeVariable(K), TypeVariable(V)>) -> Unit): Unit defined in kotlin.collections
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:81:27 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/search/ChooseSearchEngineActivity.kt:83:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:23:28 Not enough information to infer type variable T
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:23:28 Property delegate must have a 'getValue(ChooseThemeActivity, KProperty<*>)' method. None of the following functions is suitable: 
+public inline operator fun <T> Lazy<???>.getValue(thisRef: Any?, property: KProperty<*>): ??? defined in kotlin
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:24:16 Unresolved reference: button_system_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:24:37 Unresolved reference: button_light_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:24:57 Unresolved reference: button_dark_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:41:9 Unresolved reference: root_view
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:45:9 Unresolved reference: toolbar
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:50:9 Unresolved reference: button_system_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:50:29 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:51:9 Unresolved reference: button_light_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:51:28 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:52:9 Unresolved reference: button_dark_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:52:27 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:56:9 Unresolved reference: button_system_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:56:57 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:61:33 Unresolved reference: button_system_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:65:9 Unresolved reference: button_light_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:65:56 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:70:33 Unresolved reference: button_light_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:74:9 Unresolved reference: button_dark_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:74:55 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:79:33 Unresolved reference: button_dark_theme
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:85:17 Overload resolution ambiguity: 
+public inline fun <T> Iterable<TypeVariable(T)>.forEach(action: (TypeVariable(T)) -> Unit): Unit defined in kotlin.collections
+public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.forEach(action: (Map.Entry<TypeVariable(K), TypeVariable(V)>) -> Unit): Unit defined in kotlin.collections
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:85:27 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/feature/tabs/settings/theme/ChooseThemeActivity.kt:87:24 Variable expected
+e: file:///home/shiroe/AndroidStudioProjects/QrAndBarcodeScanner/app/src/main/java/com/example/barcodescanner/usecase/BarcodeImageScanner.kt:43:25 Type mismatch: inferred type is IntArray? but IntArray was expected
+ASM Instrumentation process wasn't able to resolve some classes, this means that
+the instrumented classes might contain corrupt stack frames. Make sure the
+dependencies that contain these classes are on the runtime or the provided
+classpath. Otherwise, the jvm might fail to load the corrupt classes at runtime
+when running in a jvm environment like unit tests.
+
+Classes that weren't resolved:
+> java.beans.IndexedPropertyDescriptor
+> java.beans.PropertyDescriptor
+> java.beans.IntrospectionException
+> org.jdom.ProcessingInstruction
+> org.jdom.DocType
+> org.jdom.Element
+> javax.servlet.ServletException
+> javax.servlet.jsp.JspWriter
+> org.python.core.PyObject
+> javax.servlet.http.HttpServletRequest
+-- 2 more classes --
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileGooglePlayDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2m 31s
+40 actionable tasks: 39 executed, 1 up-to-date

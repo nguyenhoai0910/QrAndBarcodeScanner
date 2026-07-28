@@ -10,7 +10,6 @@ import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.extension.unsafeLazy
 import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.usecase.Settings
-import kotlinx.android.synthetic.main.activity_choose_theme.*
 
 class ChooseThemeActivity : BaseActivity() {
 

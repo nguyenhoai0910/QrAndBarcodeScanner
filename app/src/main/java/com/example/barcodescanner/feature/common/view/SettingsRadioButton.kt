@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.isInvisible
 import com.example.barcodescanner.R
-import kotlinx.android.synthetic.main.layout_settings_radio_button.view.*
 
 class SettingsRadioButton : FrameLayout {
     private val view: View

@@ -9,7 +9,6 @@ import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.feature.tabs.create.CreateBarcodeActivity
 import com.example.barcodescanner.model.schema.BarcodeSchema
 import com.google.zxing.BarcodeFormat
-import kotlinx.android.synthetic.main.activity_create_qr_code_all.*
 
 class CreateQrCodeAllActivity : BaseActivity() {
 

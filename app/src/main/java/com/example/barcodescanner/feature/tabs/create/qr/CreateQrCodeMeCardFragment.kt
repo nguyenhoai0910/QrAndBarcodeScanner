@@ -10,7 +10,6 @@ import com.example.barcodescanner.feature.tabs.create.BaseCreateBarcodeFragment
 import com.example.barcodescanner.model.Contact
 import com.example.barcodescanner.model.schema.MeCard
 import com.example.barcodescanner.model.schema.Schema
-import kotlinx.android.synthetic.main.fragment_create_qr_code_mecard.*
 
 class CreateQrCodeMeCardFragment : BaseCreateBarcodeFragment() {
 

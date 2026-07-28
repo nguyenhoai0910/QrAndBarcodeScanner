@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.barcodescanner.R
 import com.example.barcodescanner.extension.toStringId
 import com.google.zxing.BarcodeFormat
-import kotlinx.android.synthetic.main.item_barcode_format.view.*
 
 class FormatsAdapter(
     private val listener: Listener,

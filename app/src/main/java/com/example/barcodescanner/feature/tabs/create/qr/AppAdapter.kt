@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.barcodescanner.R
-import kotlinx.android.synthetic.main.item_app.view.*
 
 class AppAdapter(private val listener: Listener) : RecyclerView.Adapter<AppAdapter.ViewHolder>() {
 

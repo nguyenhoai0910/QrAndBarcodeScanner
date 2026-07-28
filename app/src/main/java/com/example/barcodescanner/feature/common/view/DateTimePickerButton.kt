@@ -9,7 +9,6 @@ import android.widget.FrameLayout
 import com.example.barcodescanner.R
 import com.example.barcodescanner.extension.formatOrNull
 import com.github.florent37.singledateandtimepicker.dialog.SingleDateAndTimePickerDialog
-import kotlinx.android.synthetic.main.layout_date_time_picker_button.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
