@@ -29,6 +29,8 @@ proguard/
 
 # Log Files
 *.log
+build_log.txt
+compile_log.txt
 
 # Android Studio
 /*/local.properties
