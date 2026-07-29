@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.11
+* Fix Quick Settings tile not working on Android 14 and above
+* Update app to support the latest Android versions
+* Remove crash reporting for improved privacy
+* Update dependencies and libraries
+
 ## 1.10
 * Add support for Airline Boarding Pass barcodes
 * Update translations
