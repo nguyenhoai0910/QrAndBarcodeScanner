@@ -1,5 +1,4 @@
 plugins {
-    id("io.sentry.android.gradle") version "6.16.0"
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.devtools.ksp'
@@ -11,14 +10,6 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
-//sentry {
-//    includeProguardMapping = true
-//    autoUploadProguardMapping = true
-//}
-sentry {
-    includeProguardMapping = false
-    autoUploadProguardMapping = false
-}
 
 android {
     namespace 'com.example.barcodescanner'
@@ -82,6 +73,12 @@ android {
             buildConfigField "boolean", "ERROR_REPORTS_ENABLED_BY_DEFAULT", "false"
         }
     }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "QRBarcodeScanner-${variant.flavorName}-${variant.versionName}.apk"
+        }
+    }
+
     buildFeatures {
         buildConfig true
         viewBinding true
@@ -142,6 +139,4 @@ dependencies {
     // Date time picker
     implementation 'com.github.florent37:singledateandtimepicker:2.2.7'
 
-    // Sentry
-    implementation 'io.sentry:sentry-android-core:7.14.0'
 }
