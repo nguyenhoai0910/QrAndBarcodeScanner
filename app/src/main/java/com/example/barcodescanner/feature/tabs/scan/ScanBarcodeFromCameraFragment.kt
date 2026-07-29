@@ -30,8 +30,12 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
+import com.example.barcodescanner.databinding.FragmentScanBarcodeFromCameraBinding
 
 class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.Listener {
+    private var _binding: FragmentScanBarcodeFromCameraBinding? = null
+    private val binding get() = _binding!!
+
 
     companion object {
         private val PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
@@ -49,7 +53,10 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
     private var lastResult: Barcode? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_scan_barcode_from_camera, container, false)
+        return FragmentScanBarcodeFromCameraBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -95,13 +102,14 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding = null
         setLightStatusBar()
         disposable.clear()
     }
 
     private fun supportEdgeToEdge() {
-        image_view_flash.applySystemWindowInsets(applyTop = true)
-        image_view_scan_from_file.applySystemWindowInsets(applyTop = true)
+        binding.imageViewFlash.applySystemWindowInsets(applyTop = true)
+        binding.imageViewScanFromFile.applySystemWindowInsets(applyTop = true)
     }
 
     private fun setDarkStatusBar() {
@@ -133,7 +141,7 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
     }
 
     private fun initScanner() {
-        codeScanner = CodeScanner(requireActivity(), scanner_view).apply {
+        codeScanner = CodeScanner(requireActivity(), binding.scannerView).apply {
             camera = if (settings.isBackCamera) {
                 CodeScanner.CAMERA_BACK
             } else {
@@ -157,26 +165,26 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
     private fun initZoomSeekBar() {
         scannerCameraHelper.getCameraParameters(settings.isBackCamera)?.apply {
             this@ScanBarcodeFromCameraFragment.maxZoom = maxZoom
-            seek_bar_zoom.max = maxZoom
-            seek_bar_zoom.progress = zoom
+            binding.seekBarZoom.max = maxZoom
+            binding.seekBarZoom.progress = zoom
         }
     }
 
     private fun initFlashButton() {
-        layout_flash_container.setOnClickListener {
+        binding.layoutFlashContainer.setOnClickListener {
             toggleFlash()
         }
-        image_view_flash.isActivated = settings.flash
+        binding.imageViewFlash.isActivated = settings.flash
     }
 
     private fun handleScanFromFileClicked() {
-        layout_scan_from_file_container.setOnClickListener {
+        binding.layoutScanFromFileContainer.setOnClickListener {
             navigateToScanFromFileScreen()
         }
     }
 
     private fun handleZoomChanged() {
-        seek_bar_zoom.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        binding.seekBarZoom.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onStartTrackingTouch(seekBar: SeekBar?) { }
             override fun onStopTrackingTouch(seekBar: SeekBar?) { }
 
@@ -189,13 +197,13 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
     }
 
     private fun handleDecreaseZoomClicked() {
-        button_decrease_zoom.setOnClickListener {
+        binding.buttonDecreaseZoom.setOnClickListener {
             decreaseZoom()
         }
     }
 
     private fun handleIncreaseZoomClicked() {
-        button_increase_zoom.setOnClickListener {
+        binding.buttonIncreaseZoom.setOnClickListener {
             increaseZoom()
         }
     }
@@ -207,7 +215,7 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
             } else {
                 zoom = 0
             }
-            seek_bar_zoom.progress = zoom
+            binding.seekBarZoom.progress = zoom
         }
     }
 
@@ -218,7 +226,7 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
             } else {
                 zoom = maxZoom
             }
-            seek_bar_zoom.progress = zoom
+            binding.seekBarZoom.progress = zoom
         }
     }
 
@@ -304,7 +312,7 @@ class ScanBarcodeFromCameraFragment : Fragment(), ConfirmBarcodeDialogFragment.L
     }
 
     private fun toggleFlash() {
-        image_view_flash.isActivated = image_view_flash.isActivated.not()
+        binding.imageViewFlash.isActivated = binding.imageViewFlash.isActivated.not()
         codeScanner.isFlashEnabled = codeScanner.isFlashEnabled.not()
     }
 

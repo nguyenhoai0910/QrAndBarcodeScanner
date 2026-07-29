@@ -18,8 +18,12 @@ import io.reactivex.BackpressureStrategy
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
+import com.example.barcodescanner.databinding.FragmentBarcodeHistoryListBinding
 
 class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
+    private var _binding: FragmentBarcodeHistoryListBinding? = null
+    private val binding get() = _binding!!
+
 
     companion object {
         private const val PAGE_SIZE = 20
@@ -48,7 +52,10 @@ class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
     private val scanHistoryAdapter = BarcodeHistoryAdapter(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_barcode_history_list, container, false)
+        return FragmentBarcodeHistoryListBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -63,11 +70,12 @@ class BarcodeHistoryListFragment : Fragment(), BarcodeHistoryAdapter.Listener {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding = null
         disposable.clear()
     }
 
     private fun initRecyclerView() {
-        recycler_view_history.apply {
+        binding.recyclerViewHistory.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = scanHistoryAdapter
         }

@@ -18,13 +18,20 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.FragmentCreateQrCodeAppBinding
 
 class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
+    private var _binding: FragmentCreateQrCodeAppBinding? = null
+    private val binding get() = _binding!!
+
     private val disposable = CompositeDisposable()
     private val appAdapter by unsafeLazy { AppAdapter(parentActivity) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_qr_code_app, container, false)
+        return FragmentCreateQrCodeAppBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,11 +46,12 @@ class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding = null
         disposable.clear()
     }
 
     private fun initRecyclerView() {
-        recycler_view_apps.apply {
+        binding.recyclerViewApps.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = appAdapter
         }
@@ -79,8 +87,8 @@ class CreateQrCodeAppFragment : BaseCreateBarcodeFragment() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        progress_bar_loading.isVisible = isLoading
-        recycler_view_apps.isVisible = isLoading.not()
+        binding.progressBarLoading.isVisible = isLoading
+        binding.recyclerViewApps.isVisible = isLoading.not()
     }
 
     private fun showApps(apps: List<ResolveInfo>) {

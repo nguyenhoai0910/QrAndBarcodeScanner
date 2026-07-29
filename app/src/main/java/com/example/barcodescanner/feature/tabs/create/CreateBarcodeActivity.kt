@@ -30,9 +30,11 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.ActivityCreateBarcodeBinding
 
 
 class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
+    private lateinit var binding: ActivityCreateBarcodeBinding
 
     companion object {
         private const val BARCODE_FORMAT_KEY = "BARCODE_FORMAT_KEY"
@@ -79,7 +81,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
                 R.drawable.ic_confirm_disabled
             }
 
-            toolbar.menu?.findItem(R.id.item_create_barcode)?.apply {
+            binding.toolbar.menu?.findItem(R.id.item_create_barcode)?.apply {
                 icon = ContextCompat.getDrawable(this@CreateBarcodeActivity, iconId)
                 isEnabled = enabled
             }
@@ -92,7 +94,8 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
             return
         }
 
-        setContentView(R.layout.activity_create_barcode)
+        binding = ActivityCreateBarcodeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         handleToolbarBackClicked()
         handleToolbarMenuItemClicked()
@@ -134,7 +137,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun createBarcodeImmediatelyIfNeeded(): Boolean {
@@ -192,13 +195,13 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
     }
 
     private fun handleToolbarBackClicked() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun handleToolbarMenuItemClicked() {
-        toolbar.setOnMenuItemClickListener { item ->
+        binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.item_phone -> choosePhone()
                 R.id.item_contacts -> requestContactsPermissions()
@@ -210,7 +213,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
 
     private fun showToolbarTitle() {
         val titleId = barcodeSchema?.toStringId() ?: barcodeFormat.toStringId()
-        toolbar.setTitle(titleId)
+        binding.toolbar.setTitle(titleId)
     }
 
     private fun showToolbarMenu() {
@@ -220,7 +223,7 @@ class CreateBarcodeActivity : BaseActivity(), AppAdapter.Listener {
             BarcodeSchema.VCARD, BarcodeSchema.MECARD -> R.menu.menu_create_qr_code_contacts
             else -> R.menu.menu_create_barcode
         }
-        toolbar.inflateMenu(menuId)
+        binding.toolbar.inflateMenu(menuId)
     }
 
     private fun showFragment() {

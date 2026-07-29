@@ -15,13 +15,20 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.FragmentBarcodeHistoryBinding
 
 
 class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
+    private var _binding: FragmentBarcodeHistoryBinding? = null
+    private val binding get() = _binding!!
+
     private val disposable = CompositeDisposable()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_barcode_history, container, false)
+        return FragmentBarcodeHistoryBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,20 +44,21 @@ class BarcodeHistoryFragment : Fragment(), DeleteConfirmationDialogFragment.List
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding = null
         disposable.clear()
     }
 
     private fun supportEdgeToEdge() {
-        app_bar_layout.applySystemWindowInsets(applyTop = true)
+        binding.appBarLayout.applySystemWindowInsets(applyTop = true)
     }
 
     private fun initTabs() {
-        view_pager.adapter = BarcodeHistoryViewPagerAdapter(requireContext(), childFragmentManager)
-        tab_layout.setupWithViewPager(view_pager)
+        binding.viewPager.adapter = BarcodeHistoryViewPagerAdapter(requireContext(), childFragmentManager)
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 
     private fun handleMenuClicked() {
-        toolbar.setOnMenuItemClickListener { item ->
+        binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.item_export_history -> navigateToExportHistoryScreen()
                 R.id.item_clear_history -> showDeleteHistoryConfirmationDialog()

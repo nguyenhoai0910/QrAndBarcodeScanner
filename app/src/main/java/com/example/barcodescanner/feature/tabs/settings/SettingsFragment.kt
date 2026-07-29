@@ -24,13 +24,20 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.FragmentSettingsBinding
 
 
 class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
+    private var _binding: FragmentSettingsBinding? = null
+    private val binding get() = _binding!!
+
     private val disposable = CompositeDisposable()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        return FragmentSettingsBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -52,51 +59,52 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        _binding = null
         disposable.clear()
     }
 
     fun supportEdgeToEdge() {
-        app_bar_layout.applySystemWindowInsets(applyTop = true)
+        binding.appBarLayout.applySystemWindowInsets(applyTop = true)
     }
 
     private fun handleButtonCheckedChanged() {
-        button_inverse_barcode_colors_in_dark_theme.setCheckedChangedListener { settings.areBarcodeColorsInversed = it }
-        button_open_links_automatically.setCheckedChangedListener { settings.openLinksAutomatically = it }
-        button_copy_to_clipboard.setCheckedChangedListener { settings.copyToClipboard = it }
-        button_simple_auto_focus.setCheckedChangedListener { settings.simpleAutoFocus = it }
-        button_flashlight.setCheckedChangedListener { settings.flash = it }
-        button_vibrate.setCheckedChangedListener { settings.vibrate = it }
-        button_continuous_scanning.setCheckedChangedListener { settings.continuousScanning = it }
-        button_confirm_scans_manually.setCheckedChangedListener { settings.confirmScansManually = it }
-        button_save_scanned_barcodes.setCheckedChangedListener { settings.saveScannedBarcodesToHistory = it }
-        button_save_created_barcodes.setCheckedChangedListener { settings.saveCreatedBarcodesToHistory = it }
-        button_do_not_save_duplicates.setCheckedChangedListener { settings.doNotSaveDuplicates = it }
-        button_enable_error_reports.setCheckedChangedListener { settings.areErrorReportsEnabled = it }
+        binding.buttonInverseBarcodeColorsInDarkTheme.setCheckedChangedListener { settings.areBarcodeColorsInversed = it }
+        binding.buttonOpenLinksAutomatically.setCheckedChangedListener { settings.openLinksAutomatically = it }
+        binding.buttonCopyToClipboard.setCheckedChangedListener { settings.copyToClipboard = it }
+        binding.buttonSimpleAutoFocus.setCheckedChangedListener { settings.simpleAutoFocus = it }
+        binding.buttonFlashlight.setCheckedChangedListener { settings.flash = it }
+        binding.buttonVibrate.setCheckedChangedListener { settings.vibrate = it }
+        binding.buttonContinuousScanning.setCheckedChangedListener { settings.continuousScanning = it }
+        binding.buttonConfirmScansManually.setCheckedChangedListener { settings.confirmScansManually = it }
+        binding.buttonSaveScannedBarcodes.setCheckedChangedListener { settings.saveScannedBarcodesToHistory = it }
+        binding.buttonSaveCreatedBarcodes.setCheckedChangedListener { settings.saveCreatedBarcodesToHistory = it }
+        binding.buttonDoNotSaveDuplicates.setCheckedChangedListener { settings.doNotSaveDuplicates = it }
+        binding.buttonEnableErrorReports.setCheckedChangedListener { settings.areErrorReportsEnabled = it }
     }
 
     private fun handleButtonClicks() {
-        button_choose_theme.setOnClickListener { ChooseThemeActivity.start(requireActivity()) }
-        button_choose_camera.setOnClickListener { ChooseCameraActivity.start(requireActivity()) }
-        button_select_supported_formats.setOnClickListener { SupportedFormatsActivity.start(requireActivity()) }
-        button_clear_history.setOnClickListener { showDeleteHistoryConfirmationDialog() }
-        button_choose_search_engine.setOnClickListener { ChooseSearchEngineActivity.start(requireContext()) }
-        button_permissions.setOnClickListener { AllPermissionsActivity.start(requireActivity()) }
-        button_check_updates.setOnClickListener { showAppInMarket() }
-        button_source_code.setOnClickListener { showSourceCode() }
+        binding.buttonChooseTheme.setOnClickListener { ChooseThemeActivity.start(requireActivity()) }
+        binding.buttonChooseCamera.setOnClickListener { ChooseCameraActivity.start(requireActivity()) }
+        binding.buttonSelectSupportedFormats.setOnClickListener { SupportedFormatsActivity.start(requireActivity()) }
+        binding.buttonClearHistory.setOnClickListener { showDeleteHistoryConfirmationDialog() }
+        binding.buttonChooseSearchEngine.setOnClickListener { ChooseSearchEngineActivity.start(requireContext()) }
+        binding.buttonPermissions.setOnClickListener { AllPermissionsActivity.start(requireActivity()) }
+        binding.buttonCheckUpdates.setOnClickListener { showAppInMarket() }
+        binding.buttonSourceCode.setOnClickListener { showSourceCode() }
     }
 
     private fun clearHistory() {
-        button_clear_history.isEnabled = false
+        binding.buttonClearHistory.isEnabled = false
 
         barcodeDatabase.deleteAll()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 {
-                    button_clear_history.isEnabled = true
+                    binding.buttonClearHistory.isEnabled = true
                 },
                 { error ->
-                    button_clear_history.isEnabled = true
+                    binding.buttonClearHistory.isEnabled = true
                     showError(error)
                 }
             )
@@ -105,18 +113,18 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
 
     private fun showSettings() {
         settings.apply {
-            button_inverse_barcode_colors_in_dark_theme.isChecked = areBarcodeColorsInversed
-            button_open_links_automatically.isChecked = openLinksAutomatically
-            button_copy_to_clipboard.isChecked = copyToClipboard
-            button_simple_auto_focus.isChecked = simpleAutoFocus
-            button_flashlight.isChecked = flash
-            button_vibrate.isChecked = vibrate
-            button_continuous_scanning.isChecked = continuousScanning
-            button_confirm_scans_manually.isChecked = confirmScansManually
-            button_save_scanned_barcodes.isChecked = saveScannedBarcodesToHistory
-            button_save_created_barcodes.isChecked = saveCreatedBarcodesToHistory
-            button_do_not_save_duplicates.isChecked = doNotSaveDuplicates
-            button_enable_error_reports.isChecked = areErrorReportsEnabled
+            binding.buttonInverseBarcodeColorsInDarkTheme.isChecked = areBarcodeColorsInversed
+            binding.buttonOpenLinksAutomatically.isChecked = openLinksAutomatically
+            binding.buttonCopyToClipboard.isChecked = copyToClipboard
+            binding.buttonSimpleAutoFocus.isChecked = simpleAutoFocus
+            binding.buttonFlashlight.isChecked = flash
+            binding.buttonVibrate.isChecked = vibrate
+            binding.buttonContinuousScanning.isChecked = continuousScanning
+            binding.buttonConfirmScansManually.isChecked = confirmScansManually
+            binding.buttonSaveScannedBarcodes.isChecked = saveScannedBarcodesToHistory
+            binding.buttonSaveCreatedBarcodes.isChecked = saveCreatedBarcodesToHistory
+            binding.buttonDoNotSaveDuplicates.isChecked = doNotSaveDuplicates
+            binding.buttonEnableErrorReports.isChecked = areErrorReportsEnabled
         }
     }
 
@@ -143,6 +151,6 @@ class SettingsFragment : Fragment(), DeleteConfirmationDialogFragment.Listener {
     }
 
     private fun showAppVersion() {
-        button_app_version.hint = BuildConfig.VERSION_NAME
+        binding.buttonAppVersion.hint = BuildConfig.VERSION_NAME
     }
 }

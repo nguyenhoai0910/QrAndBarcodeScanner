@@ -11,8 +11,10 @@ import com.example.barcodescanner.extension.unsafeLazy
 import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.usecase.SupportedBarcodeFormats
 import com.google.zxing.BarcodeFormat
+import com.example.barcodescanner.databinding.ActivitySupportedFormatsBinding
 
 class SupportedFormatsActivity : BaseActivity(), FormatsAdapter.Listener {
+    private lateinit var binding: ActivitySupportedFormatsBinding
 
     companion object {
         fun start(context: Context) {
@@ -27,7 +29,8 @@ class SupportedFormatsActivity : BaseActivity(), FormatsAdapter.Listener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_supported_formats)
+        binding = ActivitySupportedFormatsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         initRecyclerView()
         handleToolbarBackClicked()
@@ -38,18 +41,18 @@ class SupportedFormatsActivity : BaseActivity(), FormatsAdapter.Listener {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun initRecyclerView() {
-        recycler_view_formats.apply {
+        binding.recyclerViewFormats.apply {
             layoutManager = LinearLayoutManager(this@SupportedFormatsActivity)
             adapter = formatsAdapter
         }
     }
 
     private fun handleToolbarBackClicked() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }

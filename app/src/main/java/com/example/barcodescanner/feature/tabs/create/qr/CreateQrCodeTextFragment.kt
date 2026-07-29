@@ -12,8 +12,12 @@ import com.example.barcodescanner.extension.textString
 import com.example.barcodescanner.feature.tabs.create.BaseCreateBarcodeFragment
 import com.example.barcodescanner.model.schema.Schema
 import com.google.zxing.BarcodeFormat
+import com.example.barcodescanner.databinding.FragmentCreateQrCodeTextBinding
 
 class CreateQrCodeTextFragment : BaseCreateBarcodeFragment() {
+    private var _binding: FragmentCreateQrCodeTextBinding? = null
+    private val binding get() = _binding!!
+
 
     companion object {
         private const val DEFAULT_TEXT_KEY = "DEFAULT_TEXT_KEY"
@@ -28,7 +32,10 @@ class CreateQrCodeTextFragment : BaseCreateBarcodeFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_qr_code_text, container, false)
+        return FragmentCreateQrCodeTextBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,12 +45,12 @@ class CreateQrCodeTextFragment : BaseCreateBarcodeFragment() {
     }
 
     override fun getBarcodeSchema(): Schema {
-        return barcodeParser.parseSchema(BarcodeFormat.QR_CODE, edit_text.textString)
+        return barcodeParser.parseSchema(BarcodeFormat.QR_CODE, binding.editText.textString)
     }
 
     private fun initEditText() {
         val defaultText = arguments?.getString(DEFAULT_TEXT_KEY).orEmpty()
-        edit_text.apply {
+        binding.editText.apply {
             setText(defaultText)
             setSelection(defaultText.length)
             requestFocus()
@@ -51,8 +58,13 @@ class CreateQrCodeTextFragment : BaseCreateBarcodeFragment() {
     }
 
     private fun handleTextChanged() {
-        edit_text.addTextChangedListener {
-            parentActivity.isCreateBarcodeButtonEnabled = edit_text.isNotBlank()
+        binding.editText.addTextChangedListener {
+            parentActivity.isCreateBarcodeButtonEnabled = binding.editText.isNotBlank()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -11,24 +11,23 @@ import com.example.barcodescanner.extension.formatOrNull
 import com.github.florent37.singledateandtimepicker.dialog.SingleDateAndTimePickerDialog
 import java.text.SimpleDateFormat
 import java.util.*
+import com.example.barcodescanner.databinding.LayoutDateTimePickerButtonBinding
 
 class DateTimePickerButton : FrameLayout {
     private val dateFormatter = SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.ENGLISH)
-    private val view: View
+    private val binding: LayoutDateTimePickerButtonBinding
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, -1)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        view = LayoutInflater
-            .from(context)
-            .inflate(R.layout.layout_date_time_picker_button, this, true)
+        binding = LayoutDateTimePickerButtonBinding.inflate(LayoutInflater.from(context), this, true)
 
         context.obtainStyledAttributes(attrs, R.styleable.DateTimePickerButton).apply {
             showHint(this)
             recycle()
         }
 
-        view.setOnClickListener {
+        binding.root.setOnClickListener {
             showDateTimePickerDialog()
         }
 
@@ -42,13 +41,13 @@ class DateTimePickerButton : FrameLayout {
         }
 
     private fun showHint(attributes: TypedArray) {
-        view.text_view_hint.text = attributes.getString(R.styleable.DateTimePickerButton_hint).orEmpty()
+        binding.textViewHint.text = attributes.getString(R.styleable.DateTimePickerButton_hint).orEmpty()
     }
 
     private fun showDateTimePickerDialog() {
         SingleDateAndTimePickerDialog.Builder(context)
             .backgroundColor(context.resources.getColor(R.color.date_time_picker_dialog_background_color))
-            .title(view.text_view_hint.text.toString())
+            .title(binding.textViewHint.text.toString())
             .mainColor(context.resources.getColor(R.color.blue))
             .listener { newDateTime ->
                 dateTime = newDateTime.time
@@ -58,6 +57,6 @@ class DateTimePickerButton : FrameLayout {
     }
 
     private fun showDateTime() {
-        view.text_view_date_time.text = dateFormatter.formatOrNull(dateTime).orEmpty()
+        binding.textViewDateTime.text = dateFormatter.formatOrNull(dateTime).orEmpty()
     }
 }

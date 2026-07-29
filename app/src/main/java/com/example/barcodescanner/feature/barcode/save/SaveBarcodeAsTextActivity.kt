@@ -19,8 +19,10 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.ActivitySaveBarcodeAsTextBinding
 
 class SaveBarcodeAsTextActivity : BaseActivity() {
+    private lateinit var binding: ActivitySaveBarcodeAsTextBinding
 
     companion object {
         private const val REQUEST_PERMISSIONS_CODE = 101
@@ -44,7 +46,8 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_save_barcode_as_text)
+        binding = ActivitySaveBarcodeAsTextBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         initToolbar()
         initFormatSpinner()
@@ -63,17 +66,17 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun initToolbar() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun initFormatSpinner() {
-        spinner_save_as.adapter = ArrayAdapter.createFromResource(
+        binding.spinnerSaveAs.adapter = ArrayAdapter.createFromResource(
             this, R.array.activity_save_barcode_as_text_formats, R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
@@ -81,7 +84,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
 
     private fun initSaveButton() {
-        button_save.setOnClickListener {
+        binding.buttonSave.setOnClickListener {
             requestPermissions()
         }
     }
@@ -91,7 +94,7 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
 
     private fun saveBarcode() {
-        val saveFunc = when (spinner_save_as.selectedItemPosition) {
+        val saveFunc = when (binding.spinnerSaveAs.selectedItemPosition) {
             0 -> barcodeSaver::saveBarcodeAsCsv
             1 -> barcodeSaver::saveBarcodeAsJson
             else -> return
@@ -113,8 +116,8 @@ class SaveBarcodeAsTextActivity : BaseActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        progress_bar_loading.isVisible = isLoading
-        scroll_view.isVisible = isLoading.not()
+        binding.progressBarLoading.isVisible = isLoading
+        binding.scrollView.isVisible = isLoading.not()
     }
 
     private fun showBarcodeSaved() {

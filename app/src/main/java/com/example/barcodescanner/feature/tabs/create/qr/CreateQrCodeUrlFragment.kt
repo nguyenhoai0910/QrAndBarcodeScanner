@@ -11,11 +11,18 @@ import com.example.barcodescanner.extension.textString
 import com.example.barcodescanner.feature.tabs.create.BaseCreateBarcodeFragment
 import com.example.barcodescanner.model.schema.Schema
 import com.example.barcodescanner.model.schema.Url
+import com.example.barcodescanner.databinding.FragmentCreateQrCodeUrlBinding
 
 class CreateQrCodeUrlFragment : BaseCreateBarcodeFragment() {
+    private var _binding: FragmentCreateQrCodeUrlBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_qr_code_url, container, false)
+        return FragmentCreateQrCodeUrlBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,12 +32,12 @@ class CreateQrCodeUrlFragment : BaseCreateBarcodeFragment() {
     }
 
     override fun getBarcodeSchema(): Schema {
-        return Url(edit_text.textString)
+        return Url(binding.editText.textString)
     }
 
     private fun showUrlPrefix() {
         val prefix = "https://"
-        edit_text.apply {
+        binding.editText.apply {
             setText(prefix)
             setSelection(prefix.length)
             requestFocus()
@@ -38,8 +45,13 @@ class CreateQrCodeUrlFragment : BaseCreateBarcodeFragment() {
     }
 
     private fun handleTextChanged() {
-        edit_text.addTextChangedListener {
-            parentActivity.isCreateBarcodeButtonEnabled = edit_text.isNotBlank()
+        binding.editText.addTextChangedListener {
+            parentActivity.isCreateBarcodeButtonEnabled = binding.editText.isNotBlank()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

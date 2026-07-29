@@ -21,8 +21,10 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.ActivityExportHistoryBinding
 
 class ExportHistoryActivity : BaseActivity() {
+    private lateinit var binding: ActivityExportHistoryBinding
     private val disposable = CompositeDisposable()
 
     companion object {
@@ -37,7 +39,8 @@ class ExportHistoryActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_export_history)
+        binding = ActivityExportHistoryBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         initToolbar()
         initExportTypeSpinner()
@@ -57,17 +60,17 @@ class ExportHistoryActivity : BaseActivity() {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun initToolbar() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun initExportTypeSpinner() {
-        spinner_export_as.adapter = ArrayAdapter.createFromResource(
+        binding.spinnerExportAs.adapter = ArrayAdapter.createFromResource(
             this, R.array.activity_export_history_types, R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
@@ -75,13 +78,13 @@ class ExportHistoryActivity : BaseActivity() {
     }
 
     private fun initFileNameEditText() {
-        edit_text_file_name.addTextChangedListener {
-            button_export.isEnabled = edit_text_file_name.isNotBlank()
+        binding.editTextFileName.addTextChangedListener {
+            binding.buttonExport.isEnabled = binding.editTextFileName.isNotBlank()
         }
     }
 
     private fun initExportButton() {
-        button_export.setOnClickListener {
+        binding.buttonExport.setOnClickListener {
             requestPermissions()
         }
     }
@@ -91,8 +94,8 @@ class ExportHistoryActivity : BaseActivity() {
     }
 
     private fun exportHistory() {
-        val fileName = edit_text_file_name.textString
-        val saveFunc = when (spinner_export_as.selectedItemPosition) {
+        val fileName = binding.editTextFileName.textString
+        val saveFunc = when (binding.spinnerExportAs.selectedItemPosition) {
             0 -> barcodeSaver::saveBarcodeHistoryAsCsv
             1 -> barcodeSaver::saveBarcodeHistoryAsJson
             else -> return
@@ -120,8 +123,8 @@ class ExportHistoryActivity : BaseActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        progress_bar_loading.isVisible = isLoading
-        scroll_view.isVisible = isLoading.not()
+        binding.progressBarLoading.isVisible = isLoading
+        binding.scrollView.isVisible = isLoading.not()
     }
 
     private fun showHistoryExported() {

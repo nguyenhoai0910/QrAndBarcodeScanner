@@ -7,8 +7,10 @@ import com.example.barcodescanner.R
 import com.example.barcodescanner.di.settings
 import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.feature.BaseActivity
+import com.example.barcodescanner.databinding.ActivityChooseCameraBinding
 
 class ChooseCameraActivity : BaseActivity() {
+    private lateinit var binding: ActivityChooseCameraBinding
 
     companion object {
         fun start(context: Context) {
@@ -19,7 +21,8 @@ class ChooseCameraActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_camera)
+        binding = ActivityChooseCameraBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         handleToolbarBackClicked()
     }
@@ -33,33 +36,33 @@ class ChooseCameraActivity : BaseActivity() {
 
     private fun showSelectedCamera() {
         val isBackCamera = settings.isBackCamera
-        button_back_camera.isChecked = isBackCamera
-        button_front_camera.isChecked = isBackCamera.not()
+        binding.buttonBackCamera.isChecked = isBackCamera
+        binding.buttonFrontCamera.isChecked = isBackCamera.not()
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun handleToolbarBackClicked() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun handleBackCameraButtonChecked() {
-        button_back_camera.setCheckedChangedListener { isChecked ->
+        binding.buttonBackCamera.setCheckedChangedListener { isChecked ->
             if (isChecked) {
-                button_front_camera.isChecked = false
+                binding.buttonFrontCamera.isChecked = false
             }
             settings.isBackCamera = isChecked
         }
     }
 
     private fun handleFrontCameraButtonChecked() {
-        button_front_camera.setCheckedChangedListener { isChecked ->
+        binding.buttonFrontCamera.setCheckedChangedListener { isChecked ->
             if (isChecked) {
-                button_back_camera.isChecked = false
+                binding.buttonBackCamera.isChecked = false
             }
             settings.isBackCamera = isChecked.not()
         }

@@ -20,8 +20,10 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import com.example.barcodescanner.databinding.ActivitySaveBarcodeAsImageBinding
 
 class SaveBarcodeAsImageActivity : BaseActivity() {
+    private lateinit var binding: ActivitySaveBarcodeAsImageBinding
 
     companion object {
         private const val REQUEST_PERMISSIONS_CODE = 101
@@ -45,7 +47,8 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_save_barcode_as_image)
+        binding = ActivitySaveBarcodeAsImageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         initToolbar()
         initFormatSpinner()
@@ -64,17 +67,17 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun initToolbar() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun initFormatSpinner() {
-        spinner_save_as.adapter = ArrayAdapter.createFromResource(
+        binding.spinnerSaveAs.adapter = ArrayAdapter.createFromResource(
             this, R.array.activity_save_barcode_as_image_formats, R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
@@ -82,7 +85,7 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
     }
 
     private fun initSaveButton() {
-        button_save.setOnClickListener {
+        binding.buttonSave.setOnClickListener {
             requestPermissions()
         }
     }
@@ -92,7 +95,7 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
     }
 
     private fun saveBarcode() {
-        val saveFunc = when (spinner_save_as.selectedItemPosition) {
+        val saveFunc = when (binding.spinnerSaveAs.selectedItemPosition) {
             0 -> {
                 barcodeImageGenerator
                     .generateBitmapAsync(barcode, 640, 640, 2)
@@ -122,8 +125,8 @@ class SaveBarcodeAsImageActivity : BaseActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        progress_bar_loading.isVisible = isLoading
-        scroll_view.isVisible = isLoading.not()
+        binding.progressBarLoading.isVisible = isLoading
+        binding.scrollView.isVisible = isLoading.not()
     }
 
     private fun showBarcodeSaved() {

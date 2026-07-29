@@ -18,12 +18,19 @@ import com.example.barcodescanner.model.schema.OtpAuth
 import com.example.barcodescanner.model.schema.Schema
 import dev.turingcomplete.kotlinonetimepassword.RandomSecretGenerator
 import java.util.*
+import com.example.barcodescanner.databinding.FragmentCreateQrCodeOtpBinding
 
 class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {
+    private var _binding: FragmentCreateQrCodeOtpBinding? = null
+    private val binding get() = _binding!!
+
     private val randomGenerator = RandomSecretGenerator()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_qr_code_otp, container, false)
+        return FragmentCreateQrCodeOtpBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,31 +44,31 @@ class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {
 
     override fun getBarcodeSchema(): Schema {
         return OtpAuth(
-            type = spinner_opt_types.selectedItem?.toString()?.toLowerCase(Locale.ENGLISH),
-            algorithm = spinner_algorithms.selectedItem?.toString(),
-            label = if (edit_text_issuer.isNotBlank()) {
-                "${edit_text_issuer.textString}:${edit_text_account.textString}"
+            type = binding.spinnerOptTypes.selectedItem?.toString()?.lowercase(Locale.ENGLISH),
+            algorithm = binding.spinnerAlgorithms.selectedItem?.toString(),
+            label = if (binding.editTextIssuer.isNotBlank()) {
+                "${binding.editTextIssuer.textString}:${binding.editTextAccount.textString}"
             } else {
-                edit_text_account.textString
+                binding.editTextAccount.textString
             },
-            issuer = edit_text_issuer.textString,
-            digits = edit_text_digits.textString.toIntOrNull(),
-            period = edit_text_period.textString.toLongOrNull(),
-            counter = edit_text_counter.textString.toLongOrNull(),
-            secret = edit_text_secret.textString
+            issuer = binding.editTextIssuer.textString,
+            digits = binding.editTextDigits.textString.toIntOrNull(),
+            period = binding.editTextPeriod.textString.toLongOrNull(),
+            counter = binding.editTextCounter.textString.toLongOrNull(),
+            secret = binding.editTextSecret.textString
         )
     }
 
     private fun initOtpTypesSpinner() {
-        spinner_opt_types.adapter = ArrayAdapter.createFromResource(
+        binding.spinnerOptTypes.adapter = ArrayAdapter.createFromResource(
             requireContext(), R.array.fragment_create_qr_code_otp_types, R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
         }
 
-        spinner_opt_types.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.spinnerOptTypes.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                text_input_layout_counter.isVisible = position == 0
+                binding.textInputLayoutCounter.isVisible = position == 0
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -71,7 +78,7 @@ class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {
     }
 
     private fun initAlgorithmsSpinner() {
-        spinner_algorithms.adapter = ArrayAdapter.createFromResource(
+        binding.spinnerAlgorithms.adapter = ArrayAdapter.createFromResource(
             requireContext(), R.array.fragment_create_qr_code_otp_algorithms, R.layout.item_spinner
         ).apply {
             setDropDownViewResource(R.layout.item_spinner_dropdown)
@@ -79,32 +86,37 @@ class CreateQrCodeOtpFragment : BaseCreateBarcodeFragment() {
     }
 
     private fun initEditTexts() {
-        edit_text_account.addTextChangedListener { toggleCreateBarcodeButton() }
-        edit_text_secret.addTextChangedListener { toggleCreateBarcodeButton() }
-        edit_text_period.addTextChangedListener { toggleCreateBarcodeButton() }
-        edit_text_counter.addTextChangedListener { toggleCreateBarcodeButton() }
+        binding.editTextAccount.addTextChangedListener { toggleCreateBarcodeButton() }
+        binding.editTextSecret.addTextChangedListener { toggleCreateBarcodeButton() }
+        binding.editTextPeriod.addTextChangedListener { toggleCreateBarcodeButton() }
+        binding.editTextCounter.addTextChangedListener { toggleCreateBarcodeButton() }
     }
 
     private fun initGenerateRandomSecretButton() {
-        button_generate_random_secret.setOnClickListener {
+        binding.buttonGenerateRandomSecret.setOnClickListener {
             showRandomSecret()
         }
     }
 
     private fun toggleCreateBarcodeButton() {
-        val isHotp = spinner_opt_types.selectedItemPosition == 0
-        val areGeneralFieldsNotBlank = edit_text_account.isNotBlank() && edit_text_secret.isNotBlank()
-        val areHotpFieldsNotBlank = edit_text_counter.isNotBlank() && edit_text_period.isNotBlank()
+        val isHotp = binding.spinnerOptTypes.selectedItemPosition == 0
+        val areGeneralFieldsNotBlank = binding.editTextAccount.isNotBlank() && binding.editTextSecret.isNotBlank()
+        val areHotpFieldsNotBlank = binding.editTextCounter.isNotBlank() && binding.editTextPeriod.isNotBlank()
         parentActivity.isCreateBarcodeButtonEnabled = areGeneralFieldsNotBlank && (isHotp.not() || isHotp && areHotpFieldsNotBlank)
     }
 
     private fun showRandomSecret() {
-        edit_text_secret.setText(generateRandomSecret())
+        binding.editTextSecret.setText(generateRandomSecret())
     }
 
     private fun generateRandomSecret(): String {
-        val algorithm = spinner_algorithms.selectedItem?.toString().toHmacAlgorithm()
+        val algorithm = binding.spinnerAlgorithms.selectedItem?.toString().toHmacAlgorithm()
         val secret = randomGenerator.createRandomSecret(algorithm)
         return secret.encodeBase32()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

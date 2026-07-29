@@ -26,8 +26,10 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
+import com.example.barcodescanner.databinding.ActivityScanBarcodeFromFileBinding
 
 class ScanBarcodeFromFileActivity : BaseActivity() {
+    private lateinit var binding: ActivityScanBarcodeFromFileBinding
 
     companion object {
         private const val CHOOSE_FILE_REQUEST_CODE = 12
@@ -48,7 +50,8 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scan_barcode_from_file)
+        binding = ActivityScanBarcodeFromFileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportEdgeToEdge()
         handleToolbarBackPressed()
@@ -89,7 +92,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun showImageFromIntent(): Boolean {
@@ -134,16 +137,16 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     }
 
     private fun handleToolbarBackPressed() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun handleToolbarMenuItemClicked() {
-        toolbar.setOnMenuItemClickListener { item ->
+        binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
-                R.id.item_rotate_left -> crop_image_view.rotateImage(CropImageView.RotateDegrees.ROTATE_M90D)
-                R.id.item_rotate_right -> crop_image_view.rotateImage(CropImageView.RotateDegrees.ROTATE_90D)
+                R.id.item_rotate_left -> binding.cropImageView.rotateImage(CropImageView.RotateDegrees.ROTATE_M90D)
+                R.id.item_rotate_right -> binding.cropImageView.rotateImage(CropImageView.RotateDegrees.ROTATE_90D)
                 R.id.item_change_image -> startChooseImageActivityAgain()
             }
             return@setOnMenuItemClickListener true
@@ -151,7 +154,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     }
 
     private fun handleImageCropAreaChanged() {
-        crop_image_view.touches()
+        binding.cropImageView.touches()
             .filter { it.action == ACTION_UP }
             .debounce(400, TimeUnit.MILLISECONDS)
             .observeOn(AndroidSchedulers.mainThread())
@@ -160,7 +163,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     }
 
     private fun handleScanButtonClicked() {
-        button_scan.setOnClickListener {
+        binding.buttonScan.setOnClickListener {
             saveScanResult()
         }
     }
@@ -168,7 +171,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     private fun showImage(imageUri: Uri) {
         this.imageUri = imageUri
 
-        crop_image_view
+        binding.cropImageView
             .load(imageUri)
             .executeAsCompletable()
             .subscribeOn(Schedulers.io())
@@ -194,7 +197,7 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
         scanDisposable.clear()
         lastScanResult = null
 
-        crop_image_view
+        binding.cropImageView
             .cropAsSingle()
             .subscribeOn(Schedulers.io())
             .subscribe(::scanCroppedImage, ::showError)
@@ -241,12 +244,12 @@ class ScanBarcodeFromFileActivity : BaseActivity() {
     }
 
     private fun showLoading(isLoading: Boolean) {
-        progress_bar_loading.isVisible = isLoading
-        button_scan.isInvisible = isLoading
+        binding.progressBarLoading.isVisible = isLoading
+        binding.buttonScan.isInvisible = isLoading
     }
 
     private fun showScanButtonEnabled(isEnabled: Boolean) {
-        button_scan.isEnabled = isEnabled
+        binding.buttonScan.isEnabled = isEnabled
     }
 
     private fun navigateToBarcodeScreen(barcode: Barcode) {

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.barcodescanner.R
+import com.example.barcodescanner.databinding.ItemAppBinding
 
 class AppAdapter(private val listener: Listener) : RecyclerView.Adapter<AppAdapter.ViewHolder>() {
 
@@ -27,8 +28,8 @@ class AppAdapter(private val listener: Listener) : RecyclerView.Adapter<AppAdapt
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val itemView = inflater.inflate(R.layout.item_app, parent, false)
-        return ViewHolder(itemView)
+        val binding = ItemAppBinding.inflate(inflater, parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -37,7 +38,7 @@ class AppAdapter(private val listener: Listener) : RecyclerView.Adapter<AppAdapt
         holder.show(app, isLastPosition)
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(private val binding: ItemAppBinding) : RecyclerView.ViewHolder(binding.root) {
         private val packageManager: PackageManager
             get() = itemView.context.applicationContext.packageManager
 
@@ -49,15 +50,15 @@ class AppAdapter(private val listener: Listener) : RecyclerView.Adapter<AppAdapt
         }
 
         private fun showName(app: ResolveInfo) {
-            itemView.text_view.text = app.loadLabel(packageManager)
+            binding.textView.text = app.loadLabel(packageManager)
         }
 
         private fun showIcon(app: ResolveInfo) {
-            itemView.image_view.setImageDrawable(app.loadIcon(packageManager))
+            binding.imageView.setImageDrawable(app.loadIcon(packageManager))
         }
 
         private fun showDelimiter(isLastPosition: Boolean) {
-            itemView.delimiter.isInvisible = isLastPosition
+            binding.delimiter.isInvisible = isLastPosition
         }
 
         private fun handleItemClicked(app: ResolveInfo) {

@@ -10,32 +10,44 @@ import com.example.barcodescanner.feature.tabs.create.BaseCreateBarcodeFragment
 import com.example.barcodescanner.model.Contact
 import com.example.barcodescanner.model.schema.MeCard
 import com.example.barcodescanner.model.schema.Schema
+import com.example.barcodescanner.databinding.FragmentCreateQrCodeMecardBinding
 
 class CreateQrCodeMeCardFragment : BaseCreateBarcodeFragment() {
+    private var _binding: FragmentCreateQrCodeMecardBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_create_qr_code_mecard, container, false)
+        return FragmentCreateQrCodeMecardBinding.inflate(inflater, container, false).let {
+            _binding = it
+            it.root
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        edit_text_first_name.requestFocus()
+        binding.editTextFirstName.requestFocus()
         parentActivity.isCreateBarcodeButtonEnabled = true
     }
 
     override fun getBarcodeSchema(): Schema {
         return MeCard(
-            firstName = edit_text_first_name.textString,
-            lastName = edit_text_last_name.textString,
-            email = edit_text_email.textString,
-            phone = edit_text_phone.textString
+            firstName = binding.editTextFirstName.textString,
+            lastName = binding.editTextLastName.textString,
+            email = binding.editTextEmail.textString,
+            phone = binding.editTextPhone.textString
         )
     }
 
     override fun showContact(contact: Contact) {
-        edit_text_first_name.setText(contact.firstName)
-        edit_text_last_name.setText(contact.lastName)
-        edit_text_email.setText(contact.email)
-        edit_text_phone.setText(contact.phone)
+        binding.editTextFirstName.setText(contact.firstName)
+        binding.editTextLastName.setText(contact.lastName)
+        binding.editTextEmail.setText(contact.email)
+        binding.editTextPhone.setText(contact.phone)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

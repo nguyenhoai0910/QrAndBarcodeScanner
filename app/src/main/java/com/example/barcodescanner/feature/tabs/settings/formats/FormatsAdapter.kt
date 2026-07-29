@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.barcodescanner.R
 import com.example.barcodescanner.extension.toStringId
 import com.google.zxing.BarcodeFormat
+import com.example.barcodescanner.databinding.ItemBarcodeFormatBinding
 
 class FormatsAdapter(
     private val listener: Listener,
@@ -25,28 +26,28 @@ class FormatsAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val itemView = inflater.inflate(R.layout.item_barcode_format, parent, false)
-        return ViewHolder(itemView)
+        val binding = ItemBarcodeFormatBinding.inflate(inflater, parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.show(position)
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(private val binding: ItemBarcodeFormatBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun show(position: Int) {
             val format = formats[position]
-            itemView.text_view_text.text = itemView.context.resources.getString(format.toStringId())
-            itemView.delimiter.isInvisible = position == formats.lastIndex
-            itemView.check_box.isChecked = formatSelection[position]
+            binding.textViewText.text = itemView.context.resources.getString(format.toStringId())
+            binding.delimiter.isInvisible = position == formats.lastIndex
+            binding.checkBox.isChecked = formatSelection[position]
 
-            itemView.check_box.setOnCheckedChangeListener { _, isChecked ->
+            binding.checkBox.setOnCheckedChangeListener { _, isChecked ->
                listener.onFormatChecked(format, isChecked)
             }
 
             itemView.setOnClickListener {
-                itemView.check_box.toggle()
+                binding.checkBox.toggle()
             }
         }
     }

@@ -12,8 +12,10 @@ import com.example.barcodescanner.feature.tabs.history.BarcodeHistoryFragment
 import com.example.barcodescanner.feature.tabs.scan.ScanBarcodeFromCameraFragment
 import com.example.barcodescanner.feature.tabs.settings.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.barcodescanner.databinding.ActivityBottomTabsBinding
 
 class BottomTabsActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+    private lateinit var binding: ActivityBottomTabsBinding
 
     companion object {
         private const val ACTION_CREATE_BARCODE = "${BuildConfig.APPLICATION_ID}.CREATE_BARCODE"
@@ -22,7 +24,8 @@ class BottomTabsActivity : BaseActivity(), BottomNavigationView.OnNavigationItem
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bottom_tabs)
+        binding = ActivityBottomTabsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportEdgeToEdge()
         initBottomNavigationView()
@@ -33,7 +36,7 @@ class BottomTabsActivity : BaseActivity(), BottomNavigationView.OnNavigationItem
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == bottom_navigation_view.selectedItemId) {
+        if (item.itemId == binding.bottomNavigationView.selectedItemId) {
             return false
         }
         showFragment(item.itemId)
@@ -41,27 +44,27 @@ class BottomTabsActivity : BaseActivity(), BottomNavigationView.OnNavigationItem
     }
 
     override fun onBackPressed() {
-        if (bottom_navigation_view.selectedItemId == R.id.item_scan) {
+        if (binding.bottomNavigationView.selectedItemId == R.id.item_scan) {
             super.onBackPressed()
         } else {
-            bottom_navigation_view.selectedItemId = R.id.item_scan
+            binding.bottomNavigationView.selectedItemId = R.id.item_scan
         }
     }
 
     private fun supportEdgeToEdge() {
-        bottom_navigation_view.applySystemWindowInsets(applyBottom = true)
+        binding.bottomNavigationView.applySystemWindowInsets(applyBottom = true)
     }
 
     private fun initBottomNavigationView() {
-        bottom_navigation_view.apply {
+        binding.bottomNavigationView.apply {
             setOnNavigationItemSelectedListener(this@BottomTabsActivity)
         }
     }
 
     private fun showInitialFragment() {
         when (intent?.action) {
-            ACTION_CREATE_BARCODE -> bottom_navigation_view.selectedItemId = R.id.item_create
-            ACTION_HISTORY -> bottom_navigation_view.selectedItemId = R.id.item_history
+            ACTION_CREATE_BARCODE -> binding.bottomNavigationView.selectedItemId = R.id.item_create
+            ACTION_HISTORY -> binding.bottomNavigationView.selectedItemId = R.id.item_history
             else -> showFragment(R.id.item_scan)
         }
     }

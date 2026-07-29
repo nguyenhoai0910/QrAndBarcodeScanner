@@ -1,7 +1,6 @@
 package com.example.barcodescanner.usecase
 
 import android.graphics.Bitmap
-import com.example.barcodescanner.extension.orZero
 import com.google.zxing.BinaryBitmap
 import com.google.zxing.MultiFormatReader
 import com.google.zxing.RGBLuminanceSource
@@ -36,13 +35,15 @@ object BarcodeImageScanner {
         val height = image.height
         val size = width * height
 
-        if (size > bitmapBuffer?.size.orZero()) {
-            bitmapBuffer = IntArray(size)
+        var buffer = bitmapBuffer
+        if (buffer == null || size > buffer.size) {
+            buffer = IntArray(size)
+            bitmapBuffer = buffer
         }
 
-        image.getPixels(bitmapBuffer, 0, width, 0, 0, width, height)
+        image.getPixels(buffer, 0, width, 0, 0, width, height)
 
-        val source = RGBLuminanceSource(width, height, bitmapBuffer)
+        val source = RGBLuminanceSource(width, height, buffer)
         val bitmap = BinaryBitmap(HybridBinarizer(source))
 
         val reader = MultiFormatReader()

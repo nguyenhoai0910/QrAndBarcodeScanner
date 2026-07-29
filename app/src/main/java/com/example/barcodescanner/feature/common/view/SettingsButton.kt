@@ -8,16 +8,15 @@ import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
 import com.example.barcodescanner.R
+import com.example.barcodescanner.databinding.LayoutSettingsButtonBinding
 
 class SettingsButton : FrameLayout {
-    private val view: View
+    private val binding: LayoutSettingsButtonBinding
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, -1)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
-        view = LayoutInflater
-            .from(context)
-            .inflate(R.layout.layout_settings_button, this, true)
+        binding = LayoutSettingsButtonBinding.inflate(LayoutInflater.from(context), this, true)
 
         context.obtainStyledAttributes(attrs, R.styleable.SettingsButton).apply {
             showText(this)
@@ -28,31 +27,31 @@ class SettingsButton : FrameLayout {
     }
     
     var hint: String
-        get() = view.text_view_hint.text.toString()
+        get() = binding.textViewHint.text.toString()
         set(value) {
-            view.text_view_hint.apply {
+            binding.textViewHint.apply {
                 text = value
                 isVisible = text.isNullOrEmpty().not()
             }
         }
 
     var isChecked: Boolean
-        get() = view.switch_button.isChecked
-        set(value) { view.switch_button.isChecked = value }
+        get() = binding.switchButton.isChecked
+        set(value) { binding.switchButton.isChecked = value }
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
-        text_view_text.isEnabled = enabled
+        binding.textViewText.isEnabled = enabled
     }
 
     fun setCheckedChangedListener(listener: ((Boolean) -> Unit)?) {
-        view.switch_button.setOnCheckedChangeListener { _, isChecked ->
+        binding.switchButton.setOnCheckedChangeListener { _, isChecked ->
             listener?.invoke(isChecked)
         }
     }
 
     private fun showText(attributes: TypedArray) {
-        view.text_view_text.text = attributes.getString(R.styleable.SettingsButton_text).orEmpty()
+        binding.textViewText.text = attributes.getString(R.styleable.SettingsButton_text).orEmpty()
     }
 
     private fun showHint(attributes: TypedArray) {
@@ -60,10 +59,10 @@ class SettingsButton : FrameLayout {
     }
 
     private fun showSwitch(attributes: TypedArray) {
-        view.switch_button.isVisible = attributes.getBoolean(R.styleable.SettingsButton_isSwitchVisible, true)
-        if (view.switch_button.isVisible) {
-            view.setOnClickListener {
-                view.switch_button.toggle()
+        binding.switchButton.isVisible = attributes.getBoolean(R.styleable.SettingsButton_isSwitchVisible, true)
+        if (binding.switchButton.isVisible) {
+            binding.root.setOnClickListener {
+                binding.switchButton.toggle()
             }
         }
     }

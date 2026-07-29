@@ -2,7 +2,6 @@ package com.example.barcodescanner.feature.tabs.history
 
 import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isInvisible
@@ -10,13 +9,13 @@ import androidx.core.view.isVisible
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.barcodescanner.R
 import com.example.barcodescanner.extension.toColorId
 import com.example.barcodescanner.extension.toImageId
 import com.example.barcodescanner.extension.toStringId
 import com.example.barcodescanner.model.Barcode
 import java.text.SimpleDateFormat
 import java.util.*
+import com.example.barcodescanner.databinding.ItemBarcodeHistoryBinding
 
 class BarcodeHistoryAdapter(private val listener: Listener) : PagedListAdapter<Barcode, BarcodeHistoryAdapter.ViewHolder>(DiffUtilCallback) {
 
@@ -28,8 +27,8 @@ class BarcodeHistoryAdapter(private val listener: Listener) : PagedListAdapter<B
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_barcode_history, parent, false)
-        return ViewHolder(view)
+        val binding = ItemBarcodeHistoryBinding.inflate(inflater, parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -38,7 +37,7 @@ class BarcodeHistoryAdapter(private val listener: Listener) : PagedListAdapter<B
         }
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(private val binding: ItemBarcodeHistoryBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun show(barcode: Barcode, isLastItem: Boolean) {
             showDate(barcode)
@@ -52,35 +51,35 @@ class BarcodeHistoryAdapter(private val listener: Listener) : PagedListAdapter<B
         }
 
         private fun showDate(barcode: Barcode) {
-            itemView.text_view_date.text = dateFormatter.format(barcode.date)
+            binding.textViewDate.text = dateFormatter.format(barcode.date)
         }
 
         private fun showFormat(barcode: Barcode) {
-            itemView.text_view_format.setText(barcode.format.toStringId())
+            binding.textViewFormat.setText(barcode.format.toStringId())
         }
 
         private fun showText(barcode: Barcode) {
-            itemView.text_view_text.text = barcode.name ?: barcode.formattedText
+            binding.textViewText.text = barcode.name ?: barcode.formattedText
         }
 
         private fun showImage(barcode: Barcode) {
             val imageId = barcode.schema.toImageId() ?: barcode.format.toImageId()
             val image = AppCompatResources.getDrawable(itemView.context, imageId)
-            itemView.image_view_schema.setImageDrawable(image)
+            binding.imageViewSchema.setImageDrawable(image)
         }
 
         private fun showImageBackgroundColor(barcode: Barcode) {
             val colorId = barcode.format.toColorId()
             val color = itemView.context.resources.getColor(colorId)
-            (itemView.layout_image.background.mutate() as GradientDrawable).setColor(color)
+            (binding.layoutImage.background.mutate() as GradientDrawable).setColor(color)
         }
 
         private fun showIsFavorite(barcode: Barcode) {
-            itemView.image_view_favorite.isVisible = barcode.isFavorite
+            binding.imageViewFavorite.isVisible = barcode.isFavorite
         }
 
         private fun showOrHideDelimiter(isLastItem: Boolean) {
-            itemView.delimiter.isInvisible = isLastItem
+            binding.delimiter.isInvisible = isLastItem
         }
 
         private fun setClickListener(barcode: Barcode) {

@@ -10,8 +10,10 @@ import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.extension.unsafeLazy
 import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.usecase.Settings
+import com.example.barcodescanner.databinding.ActivityChooseThemeBinding
 
 class ChooseThemeActivity : BaseActivity() {
+    private lateinit var binding: ActivityChooseThemeBinding
 
     companion object {
         fun start(context: Context) {
@@ -21,12 +23,13 @@ class ChooseThemeActivity : BaseActivity() {
     }
 
     private val buttons by unsafeLazy {
-        listOf(button_system_theme, button_light_theme, button_dark_theme)
+        listOf(binding.buttonSystemTheme, binding.buttonLightTheme, binding.buttonDarkTheme)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_theme)
+        binding = ActivityChooseThemeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         initToolbar()
     }
@@ -38,45 +41,45 @@ class ChooseThemeActivity : BaseActivity() {
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun initToolbar() {
-        toolbar.setNavigationOnClickListener { finish() }
+        binding.toolbar.setNavigationOnClickListener { finish() }
     }
 
     private fun showInitialSettings() {
         val theme = settings.theme
-        button_system_theme.isChecked = theme == Settings.THEME_SYSTEM
-        button_light_theme.isChecked = theme == Settings.THEME_LIGHT
-        button_dark_theme.isChecked = theme == Settings.THEME_DARK
+        binding.buttonSystemTheme.isChecked = theme == Settings.THEME_SYSTEM
+        binding.buttonLightTheme.isChecked = theme == Settings.THEME_LIGHT
+        binding.buttonDarkTheme.isChecked = theme == Settings.THEME_DARK
     }
 
     private fun handleSettingsChanged() {
-        button_system_theme.setCheckedChangedListener { isChecked ->
+        binding.buttonSystemTheme.setCheckedChangedListener { isChecked ->
             if (isChecked.not()) {
                 return@setCheckedChangedListener
             }
 
-            uncheckOtherButtons(button_system_theme)
+            uncheckOtherButtons(binding.buttonSystemTheme)
             settings.theme = Settings.THEME_SYSTEM
         }
 
-        button_light_theme.setCheckedChangedListener { isChecked ->
+        binding.buttonLightTheme.setCheckedChangedListener { isChecked ->
             if (isChecked.not()) {
                 return@setCheckedChangedListener
             }
 
-            uncheckOtherButtons(button_light_theme)
+            uncheckOtherButtons(binding.buttonLightTheme)
             settings.theme = Settings.THEME_LIGHT
         }
 
-        button_dark_theme.setCheckedChangedListener { isChecked ->
+        binding.buttonDarkTheme.setCheckedChangedListener { isChecked ->
             if (isChecked.not()) {
                 return@setCheckedChangedListener
             }
 
-            uncheckOtherButtons(button_dark_theme)
+            uncheckOtherButtons(binding.buttonDarkTheme)
             settings.theme = Settings.THEME_DARK
         }
     }

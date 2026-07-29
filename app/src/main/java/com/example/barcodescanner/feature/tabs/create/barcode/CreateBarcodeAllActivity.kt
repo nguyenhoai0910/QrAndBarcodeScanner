@@ -8,8 +8,10 @@ import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.feature.BaseActivity
 import com.example.barcodescanner.feature.tabs.create.CreateBarcodeActivity
 import com.google.zxing.BarcodeFormat
+import com.example.barcodescanner.databinding.ActivityCreateBarcodeAllBinding
 
 class CreateBarcodeAllActivity : BaseActivity() {
+    private lateinit var binding: ActivityCreateBarcodeAllBinding
 
     companion object {
 
@@ -21,34 +23,35 @@ class CreateBarcodeAllActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_barcode_all)
+        binding = ActivityCreateBarcodeAllBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         supportEdgeToEdge()
         handleToolbarBackClicked()
         handleButtonsClicked()
     }
 
     private fun supportEdgeToEdge() {
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
     }
 
     private fun handleToolbarBackClicked() {
-        toolbar.setNavigationOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             finish()
         }
     }
 
     private fun handleButtonsClicked() {
-        button_data_matrix.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.DATA_MATRIX) }
-        button_aztec.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.AZTEC) }
-        button_pdf_417.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.PDF_417) }
-        button_codabar.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODABAR) }
-        button_code_39.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODE_39) }
-        button_code_93.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODE_93) }
-        button_code_128.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODE_128) }
-        button_ean_8.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.EAN_8) }
-        button_ean_13.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.EAN_13) }
-        button_itf_14.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.ITF) }
-        button_upc_a.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.UPC_A) }
-        button_upc_e.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.UPC_E) }
+        binding.buttonDataMatrix.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.DATA_MATRIX) }
+        binding.buttonAztec.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.AZTEC) }
+        binding.buttonPdf417.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.PDF_417) }
+        binding.buttonCodabar.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODABAR) }
+        binding.buttonCode39.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODE_39) }
+        binding.buttonCode93.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODE_93) }
+        binding.buttonCode128.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.CODE_128) }
+        binding.buttonEan8.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.EAN_8) }
+        binding.buttonEan13.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.EAN_13) }
+        binding.buttonItf14.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.ITF) }
+        binding.buttonUpcA.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.UPC_A) }
+        binding.buttonUpcE.setOnClickListener { CreateBarcodeActivity.start(this, BarcodeFormat.UPC_E) }
     }
 }

@@ -6,8 +6,10 @@ import android.os.Bundle
 import com.example.barcodescanner.R
 import com.example.barcodescanner.extension.applySystemWindowInsets
 import com.example.barcodescanner.feature.BaseActivity
+import com.example.barcodescanner.databinding.ActivityAllPermissionsBinding
 
 class AllPermissionsActivity : BaseActivity() {
+    private lateinit var binding: ActivityAllPermissionsBinding
 
     companion object {
         fun start(context: Context) {
@@ -18,8 +20,9 @@ class AllPermissionsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_all_permissions)
-        root_view.applySystemWindowInsets(applyTop = true, applyBottom = true)
-        toolbar.setNavigationOnClickListener { finish() }
+        binding = ActivityAllPermissionsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.rootView.applySystemWindowInsets(applyTop = true, applyBottom = true)
+        binding.toolbar.setNavigationOnClickListener { finish() }
     }
 }
