@@ -77,3 +77,4 @@
 # VCard Parser
 -dontwarn ezvcard.**
 -keep,includedescriptorclasses class ezvcard.** { *; }
+

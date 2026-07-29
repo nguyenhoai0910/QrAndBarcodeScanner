@@ -97,3 +97,5 @@ atlassian-ide-plugin.xml
 
 # Sentry
 /sentry.properties
+keystore.properties
+*.jks
