@@ -31,7 +31,8 @@ proguard/
 *.log
 build_log.txt
 compile_log.txt
-
+deps_full.txt
+r8_log.txt
 # Android Studio
 /*/local.properties
 /*/out
